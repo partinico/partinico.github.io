@@ -1,12 +1,975 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La nostra community</title>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <title>Partinico — Sicilia, Italia</title>
+
+  <meta
+    name="description"
+    content="Partinico, Sicilia — una nuova community digitale per persone, idee e possibilità che prendono forma sul territorio."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://partinico.github.io/"
+  >
+
+  <meta name="theme-color" content="#050505">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Partinico">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Partinico — Sicilia, Italia">
+  <meta
+    property="og:description"
+    content="Una nuova community digitale per persone, idee e possibilità che prendono forma sul territorio."
+  >
+  <meta property="og:url" content="https://partinico.github.io/">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Partinico — Sicilia, Italia">
+  <meta
+    name="twitter:description"
+    content="Una nuova community digitale per persone, idee e possibilità che prendono forma sul territorio."
+  >
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Partinico",
+    "url": "https://partinico.github.io/",
+    "description": "Una nuova community digitale per persone, idee e possibilità che prendono forma sul territorio.",
+    "inLanguage": "it-IT",
+    "about": {
+      "@type": "Place",
+      "name": "Partinico",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Partinico",
+        "addressRegion": "Sicilia",
+        "addressCountry": "IT"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: "Geist";
+      src: url("/fonts/Geist-Variable.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      font-feature-settings: "kern" 1, "liga" 1;
+    }
+
+    @font-face {
+      font-family: "Geist Mono";
+      src: url("/fonts/GeistMono-Variable.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      font-feature-settings: "kern" 1, "liga" 1;
+    }
+
+    :root {
+      --black: #050505;
+      --white: #f5f5f1;
+      --secondary: #aaa9a3;
+      --tertiary: #6e6e68;
+      --line: #292927;
+      --line-soft: #1b1b1a;
+
+      --sans:
+        "Geist",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      --mono:
+        "Geist Mono",
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+      --display:
+        clamp(3.45rem, calc(6.6vw + 1rem), 10.8rem);
+
+      --body:
+        clamp(1rem, calc(.18vw + .98rem), 1.16rem);
+
+      --gutter:
+        clamp(1.1rem, 3vw, 3.75rem);
+
+      --top:
+        clamp(1.15rem, 2.2vw, 2.75rem);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-width: 280px;
+      background: var(--black);
+      color-scheme: dark;
+      scroll-behavior: smooth;
+      text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      min-width: 280px;
+      min-height: 100svh;
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-synthesis: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-x: clip;
+    }
+
+    ::selection {
+      color: var(--black);
+      background: var(--white);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      pointer-events: none;
+      opacity: .008;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .page {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      padding:
+        var(--top)
+        var(--gutter)
+        max(var(--top), env(safe-area-inset-bottom));
+    }
+
+    .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+      animation:
+        header-in .8s cubic-bezier(.16,1,.3,1) both;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: baseline;
+      font-size: .8rem;
+      font-weight: 540;
+      line-height: 1;
+      letter-spacing: -.045em;
+      text-transform: uppercase;
+      transition: opacity .3s ease;
+    }
+
+    .brand:hover {
+      opacity: .55;
+    }
+
+    .brand:focus-visible {
+      outline: 1px solid var(--white);
+      outline-offset: 7px;
+    }
+
+    .brand-sub {
+      margin-left: .38rem;
+      color: var(--secondary);
+      font-weight: 400;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      color: var(--secondary);
+      font-family: var(--mono);
+      font-size: .65rem;
+      font-weight: 450;
+      line-height: 1.4;
+      letter-spacing: .045em;
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 5px;
+      height: 5px;
+      flex: 0 0 5px;
+      border-radius: 50%;
+      background: var(--white);
+      animation: pulse 3.4s ease-in-out infinite;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding:
+        clamp(5rem, 11vh, 9rem)
+        0
+        clamp(4rem, 8vh, 7rem);
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: .9rem;
+      width: fit-content;
+      margin-bottom: clamp(2rem, 3vw, 3.35rem);
+      color: var(--secondary);
+      font-family: var(--mono);
+      font-size: .69rem;
+      font-weight: 450;
+      line-height: 1.4;
+      letter-spacing: .025em;
+      text-transform: uppercase;
+      animation:
+        fade-up .9s .05s cubic-bezier(.16,1,.3,1) both;
+    }
+
+    .meta-rule {
+      width: 2.15rem;
+      height: 1px;
+      flex: 0 0 2.15rem;
+      background: var(--line);
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      padding-bottom: clamp(.65rem, .9vw, 1.1rem);
+    }
+
+    .hero h1 {
+      width: min(100%, 1800px);
+      margin: 0;
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: var(--display);
+      font-weight: 430;
+      line-height: .96;
+      letter-spacing: -.075em;
+      font-optical-sizing: auto;
+      font-kerning: normal;
+      text-wrap: balance;
+    }
+
+    .hero-line {
+      display: block;
+      position: relative;
+      padding: 0 .07em .09em;
+      margin-bottom: -.09em;
+      overflow: visible;
+    }
+
+    .hero-line > span {
+      display: block;
+      transform: translate3d(0, 104%, 0);
+      will-change: transform;
+      animation:
+        hero-reveal 1.08s cubic-bezier(.16,1,.3,1) forwards;
+    }
+
+    .hero-line:nth-child(1) > span {
+      animation-delay: .08s;
+    }
+
+    .hero-line:nth-child(2) > span {
+      animation-delay: .17s;
+    }
+
+    .hero-line:nth-child(3) > span {
+      animation-delay: .26s;
+    }
+
+    .index {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      color: var(--tertiary);
+      font-family: var(--mono);
+      font-size: .62rem;
+      font-weight: 450;
+      line-height: 1;
+      letter-spacing: .055em;
+      transform:
+        translateY(-50%)
+        rotate(90deg);
+      transform-origin: right center;
+      opacity: 0;
+      animation:
+        index-in .8s .8s cubic-bezier(.16,1,.3,1) forwards;
+    }
+
+    .index-line {
+      width: 1.75rem;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .information {
+      width: min(100%, 1440px);
+      display: grid;
+      grid-template-columns:
+        minmax(145px,.55fr)
+        minmax(300px,1.65fr)
+        minmax(220px,.7fr);
+      column-gap: clamp(2.5rem, 6.4vw, 7.25rem);
+      margin-top: clamp(4.35rem, 6.7vw, 7.25rem);
+      animation:
+        fade-up .95s .38s cubic-bezier(.16,1,.3,1) both;
+    }
+
+    .label {
+      margin-bottom: .72rem;
+      color: var(--secondary);
+      font-family: var(--mono);
+      font-size: .64rem;
+      font-weight: 450;
+      line-height: 1.45;
+      letter-spacing: .055em;
+      text-transform: uppercase;
+    }
+
+    .identity {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 520;
+      line-height: 1.35;
+      letter-spacing: -.025em;
+    }
+
+    .location {
+      margin-top: .28rem;
+      color: var(--secondary);
+      font-size: .76rem;
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .statement {
+      max-width: 40rem;
+      margin: 0;
+      color: var(--white);
+      font-size: var(--body);
+      font-weight: 400;
+      line-height: 1.54;
+      letter-spacing: -.015em;
+      text-wrap: pretty;
+    }
+
+    .statement strong {
+      font-weight: 540;
+    }
+
+    .progress {
+      width: 100%;
+      align-self: end;
+    }
+
+    .progress-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: .78rem;
+      color: var(--secondary);
+      font-family: var(--mono);
+      font-size: .63rem;
+      font-weight: 450;
+      line-height: 1.4;
+      letter-spacing: .045em;
+      text-transform: uppercase;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 1px;
+      overflow: hidden;
+      background: var(--line);
+    }
+
+    .progress-fill {
+      width: 32%;
+      height: 100%;
+      background: var(--white);
+      transform: scaleX(0);
+      transform-origin: left center;
+      animation:
+        progress 1.25s .7s cubic-bezier(.16,1,.3,1) forwards;
+    }
+
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: end;
+      padding-top: 16px;
+      border-top: 1px solid var(--line-soft);
+      color: var(--secondary);
+      font-family: var(--mono);
+      font-size: .61rem;
+      font-weight: 450;
+      line-height: 1.45;
+      letter-spacing: .045em;
+      text-transform: uppercase;
+      animation:
+        fade-up .9s .62s cubic-bezier(.16,1,.3,1) both;
+    }
+
+    .footer-center {
+      text-align: center;
+    }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    @media (min-width: 1600px) {
+      :root {
+        --gutter: 3.75rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(8rem, 7.7vw, 10.8rem);
+      }
+
+      .information {
+        width: min(100%, 1520px);
+      }
+    }
+
+    @media
+      (min-width: 901px)
+      and (max-width: 1399px) {
+
+      :root {
+        --display: clamp(5rem, 7.15vw, 8.7rem);
+      }
+
+      main {
+        padding-top: 7rem;
+        padding-bottom: 5.75rem;
+      }
+
+      .information {
+        column-gap: clamp(2.25rem, 4.8vw, 4.8rem);
+      }
+    }
+
+    @media (max-width: 900px) {
+      :root {
+        --display: clamp(4rem, 8.15vw, 7.3rem);
+      }
+
+      .index {
+        display: none;
+      }
+
+      .information {
+        grid-template-columns:
+          minmax(135px,.65fr)
+          minmax(280px,1.6fr);
+        row-gap: 3.25rem;
+        column-gap: clamp(2rem, 5.8vw, 4.25rem);
+      }
+
+      .progress {
+        grid-column: 1 / -1;
+        width: min(100%, 580px);
+      }
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --gutter: 1.15rem;
+        --top: 1.15rem;
+
+        --display:
+          clamp(
+            3.35rem,
+            calc(10.1vw + 1.18rem),
+            5.35rem
+          );
+
+        --body: 1rem;
+      }
+
+      .brand {
+        font-size: .74rem;
+      }
+
+      .brand-sub {
+        margin-left: .28rem;
+      }
+
+      .status {
+        max-width: 145px;
+        justify-content: flex-end;
+        font-size: .59rem;
+        line-height: 1.45;
+        text-align: right;
+      }
+
+      main {
+        justify-content: flex-start;
+        padding:
+          clamp(5.75rem, 13vh, 7.75rem)
+          0
+          4.25rem;
+      }
+
+      .meta {
+        gap: .68rem;
+        margin-bottom: 2.05rem;
+        font-size: .64rem;
+      }
+
+      .meta-rule {
+        width: 1.4rem;
+        flex-basis: 1.4rem;
+      }
+
+      .hero {
+        padding-bottom: .85rem;
+      }
+
+      .hero h1 {
+        line-height: .99;
+        letter-spacing: -.067em;
+      }
+
+      .hero-line {
+        padding: 0 .035em .125em;
+        margin-bottom: -.125em;
+      }
+
+      .information {
+        display: flex;
+        flex-direction: column;
+        gap: 2.7rem;
+        margin-top: 4.2rem;
+      }
+
+      .label {
+        margin-bottom: .67rem;
+      }
+
+      .identity {
+        font-size: 1rem;
+      }
+
+      .location {
+        font-size: .75rem;
+      }
+
+      .statement {
+        max-width: 34rem;
+        line-height: 1.56;
+        letter-spacing: -.012em;
+      }
+
+      .progress {
+        width: 100%;
+      }
+
+      .progress-head {
+        font-size: .61rem;
+      }
+
+      .footer {
+        grid-template-columns: 1fr 1fr;
+        font-size: .59rem;
+      }
+
+      .footer-center {
+        display: none;
+      }
+    }
+
+    @media (max-width: 390px) {
+      :root {
+        --display:
+          clamp(
+            3.2rem,
+            calc(9.8vw + 1.1rem),
+            4.55rem
+          );
+      }
+
+      main {
+        padding-top: 5.35rem;
+      }
+
+      .meta {
+        font-size: .6rem;
+      }
+
+      .statement {
+        font-size: .98rem;
+      }
+    }
+
+    @media
+      (max-width: 640px)
+      and (max-height: 700px) {
+
+      main {
+        padding-top: 4.65rem;
+        padding-bottom: 3.6rem;
+      }
+
+      .meta {
+        margin-bottom: 1.7rem;
+      }
+
+      .information {
+        margin-top: 3.55rem;
+        gap: 2.25rem;
+      }
+    }
+
+    @media
+      (max-width: 900px)
+      and (orientation: landscape)
+      and (max-height: 600px) {
+
+      main {
+        padding-top: 3.8rem;
+        padding-bottom: 3rem;
+      }
+
+      :root {
+        --display: clamp(3.45rem, 8.15vw, 6.5rem);
+      }
+
+      .information {
+        margin-top: 3.15rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-delay: 0ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .hero-line > span {
+        transform: none;
+      }
+
+      .progress-fill {
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes header-in {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes hero-reveal {
+      from {
+        transform: translate3d(0, 104%, 0);
+      }
+
+      to {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes index-in {
+      from {
+        opacity: 0;
+        transform:
+          translateY(-50%)
+          translateX(10px)
+          rotate(90deg);
+      }
+
+      to {
+        opacity: 1;
+        transform:
+          translateY(-50%)
+          translateX(0)
+          rotate(90deg);
+      }
+    }
+
+    @keyframes progress {
+      from {
+        transform: scaleX(0);
+      }
+
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: .35;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Benvenuti nella nostra community!</h1>
-  <p>Questo è il sito ufficiale della community.</p>
+
+  <div class="page">
+
+    <header class="header">
+
+      <a
+        class="brand"
+        href="/"
+        aria-label="Partinico"
+      >
+        PARTINICO
+
+        <span class="brand-sub">
+          / Digital Community
+        </span>
+      </a>
+
+      <div class="status">
+        <span
+          class="status-dot"
+          aria-hidden="true"
+        ></span>
+        In sviluppo
+      </div>
+
+    </header>
+
+
+    <main>
+
+      <div class="meta">
+
+        <span>
+          Community / Sicilia
+        </span>
+
+        <span
+          class="meta-rule"
+          aria-hidden="true"
+        ></span>
+
+        <span>
+          2026
+        </span>
+
+      </div>
+
+
+      <section
+        class="hero"
+        aria-labelledby="hero-title"
+      >
+
+        <h1 id="hero-title">
+
+          <span class="hero-line">
+            <span>Partinico,</span>
+          </span>
+
+          <span class="hero-line">
+            <span>qualcosa</span>
+          </span>
+
+          <span class="hero-line">
+            <span>sta prendendo forma.</span>
+          </span>
+
+        </h1>
+
+
+        <div
+          class="index"
+          aria-hidden="true"
+        >
+
+          <span>01</span>
+
+          <span
+            class="index-line"
+          ></span>
+
+          <span>01</span>
+
+        </div>
+
+      </section>
+
+
+      <section
+        class="information"
+        aria-label="Informazioni sulla community di Partinico"
+      >
+
+        <div>
+
+          <div class="label">
+            Luogo
+          </div>
+
+          <p class="identity">
+            Partinico
+          </p>
+
+          <div class="location">
+            Sicilia, Italia
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <div class="label">
+            Progetto
+          </div>
+
+          <p class="statement">
+
+            <strong>
+              Una community digitale per Partinico.
+            </strong>
+
+            Persone, idee e possibilità
+            che prendono forma sul territorio.
+
+          </p>
+
+        </div>
+
+
+        <div class="progress">
+
+          <div class="progress-head">
+
+            <span>
+              Sviluppo
+            </span>
+
+            <span>
+              32%
+            </span>
+
+          </div>
+
+          <div
+            class="progress-track"
+            role="progressbar"
+            aria-label="Avanzamento dello sviluppo"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="32"
+          >
+
+            <div class="progress-fill"></div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+      <div>
+        © 2026 PARTINICO
+      </div>
+
+      <div class="footer-center">
+        Sicilia / Italia
+      </div>
+
+      <div class="footer-right">
+        Digital Community — 01 / 01
+      </div>
+
+    </footer>
+
+  </div>
+
 </body>
 </html>
