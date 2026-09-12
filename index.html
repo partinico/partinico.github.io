@@ -12,7 +12,7 @@
 
   <meta
     name="description"
-    content="Partinico — una community digitale dedicata a persone, idee e possibilità che prendono forma sul territorio."
+    content="Partinico — Digital Community. Un progetto digitale dedicato a Partinico, Sicilia, Italia."
   >
 
   <meta name="author" content="Partinico">
@@ -42,7 +42,7 @@
 
   <meta
     property="og:description"
-    content="Una community digitale dedicata a persone, idee e possibilità che prendono forma sul territorio."
+    content="Un progetto digitale dedicato a Partinico, Sicilia, Italia."
   >
 
   <meta
@@ -60,7 +60,7 @@
 
   <meta
     name="twitter:description"
-    content="Una community digitale dedicata a persone, idee e possibilità che prendono forma sul territorio."
+    content="Un progetto digitale dedicato a Partinico, Sicilia, Italia."
   >
 
   <!-- Structured data -->
@@ -69,9 +69,9 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://partinico.github.io/#website",
-    "name": "Partinico",
+    "name": "Partinico — Digital Community",
     "url": "https://partinico.github.io/",
-    "description": "Una community digitale dedicata a persone, idee e possibilità che prendono forma sul territorio.",
+    "description": "Un progetto digitale dedicato a Partinico, Sicilia, Italia.",
     "inLanguage": "it-IT",
     "about": {
       "@type": "Place",
@@ -139,7 +139,6 @@
       min-height: 100%;
       background: var(--black);
       color-scheme: dark;
-      scroll-behavior: smooth;
       text-size-adjust: 100%;
       -webkit-text-size-adjust: 100%;
     }
@@ -175,21 +174,6 @@
     a:focus-visible {
       outline: 1px solid var(--white);
       outline-offset: 7px;
-    }
-
-    body::after {
-      content: "";
-
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-
-      pointer-events: none;
-
-      opacity: .008;
-
-      background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
     .page {
@@ -238,8 +222,7 @@
       opacity: .55;
     }
 
-    .brand:focus-visible,
-    .status:focus-visible {
+    .brand:focus-visible {
       outline: 1px solid var(--white);
       outline-offset: 7px;
     }
@@ -710,7 +693,9 @@
       }
 
       .hero h1 {
-        font-size: clamp(3rem, 16vw, 4.5rem);
+        font-size:
+          clamp(3rem, 16vw, 4.5rem);
+
         letter-spacing: -.07em;
       }
 
@@ -742,10 +727,6 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
       *,
       *::before,
       *::after {
@@ -765,10 +746,6 @@
     }
 
     @media print {
-      body::after {
-        display: none;
-      }
-
       .page {
         min-height: auto;
       }
@@ -804,13 +781,13 @@
 
       <div
         class="status"
-        aria-label="Stato del progetto: in costruzione"
+        aria-label="Stato del progetto: online"
       >
         <span
           class="status-dot"
           aria-hidden="true"
         ></span>
-        In costruzione
+        Online
       </div>
     </header>
 
@@ -820,22 +797,28 @@
         Community / Sicilia 2026
       </div>
 
-      <section class="hero" aria-labelledby="page-title">
+      <section
+        class="hero"
+        aria-labelledby="page-title"
+      >
         <h1 id="page-title">
           <span class="hero-line">
             <span>Partinico,</span>
           </span>
 
           <span class="hero-line">
-            <span>qualcosa</span>
+            <span>una comunità</span>
           </span>
 
           <span class="hero-line">
-            <span>sta prendendo forma.</span>
+            <span>digitale.</span>
           </span>
         </h1>
 
-        <div class="index" aria-hidden="true">
+        <div
+          class="index"
+          aria-hidden="true"
+        >
           <span>01</span>
           <span class="index-line"></span>
           <span>01</span>
@@ -862,21 +845,22 @@
           <div class="label">Progetto</div>
 
           <p class="statement">
-            La community digitale di Partinico,
-            dove persone, idee e possibilità
-            diventano realtà.
+            Un progetto digitale dedicato a
+            Partinico, al territorio e alle
+            possibilità che possono nascere
+            dalla sua comunità.
           </p>
         </div>
 
         <div class="project">
-          <div class="label">Stato</div>
+          <div class="label">Comunità</div>
 
           <a
             class="project-link"
             href="https://cesareparatore.github.io/community/"
-            aria-label="Scopri la Comunità di Cesare Paratore"
+            aria-label="Visita la sezione Comunità di Cesare Paratore"
           >
-            Prima fase
+            Esplora Comunità
           </a>
         </div>
       </section>
