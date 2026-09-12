@@ -8,16 +8,20 @@
     content="width=device-width, initial-scale=1, viewport-fit=cover"
   >
 
-  <title>Partinico — Sicilia, Italia</title>
+  <title>Partinico — Digital Community</title>
 
   <meta
     name="description"
-    content="Partinico, Sicilia — una nuova community digitale per persone, idee e possibilità che prendono forma sul territorio."
+    content="Partinico — una community digitale dedicata a persone, idee e possibilità che prendono forma sul territorio."
   >
 
-  <meta name="robots" content="index, follow">
+  <meta name="author" content="Partinico">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-  <link rel="canonical" href="https://partinico.github.io/">
+  <link
+    rel="canonical"
+    href="https://partinico.github.io/"
+  >
 
   <meta name="theme-color" content="#050505">
   <meta name="color-scheme" content="dark">
@@ -26,19 +30,33 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Partinico">
   <meta property="og:locale" content="it_IT">
-  <meta property="og:title" content="Partinico — Sicilia, Italia">
+
+  <meta
+    property="og:title"
+    content="Partinico — Digital Community"
+  >
+
   <meta
     property="og:description"
-    content="Una nuova community digitale per persone, idee e possibilità che prendono forma sul territorio."
+    content="Una community digitale dedicata a persone, idee e possibilità che prendono forma sul territorio."
   >
-  <meta property="og:url" content="https://partinico.github.io/">
+
+  <meta
+    property="og:url"
+    content="https://partinico.github.io/"
+  >
 
   <!-- X / Twitter -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Partinico — Sicilia, Italia">
+
+  <meta
+    name="twitter:title"
+    content="Partinico — Digital Community"
+  >
+
   <meta
     name="twitter:description"
-    content="Una nuova community digitale per persone, idee e possibilità che prendono forma sul territorio."
+    content="Una community digitale dedicata a persone, idee e possibilità che prendono forma sul territorio."
   >
 
   <!-- Structured data -->
@@ -46,12 +64,14 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://partinico.github.io/#website",
     "name": "Partinico",
     "url": "https://partinico.github.io/",
-    "description": "Una nuova community digitale per persone, idee e possibilità che prendono forma sul territorio.",
+    "description": "Una community digitale dedicata a persone, idee e possibilità che prendono forma sul territorio.",
     "inLanguage": "it-IT",
     "about": {
       "@type": "Place",
+      "@id": "https://partinico.github.io/#partinico",
       "name": "Partinico",
       "address": {
         "@type": "PostalAddress",
@@ -99,6 +119,9 @@
 
       --top:
         clamp(1.15rem, 2.2vw, 2.75rem);
+
+      --ease:
+        cubic-bezier(.16, 1, .3, 1);
     }
 
     *,
@@ -109,6 +132,7 @@
 
     html {
       min-width: 280px;
+      min-height: 100%;
       background: var(--black);
       color-scheme: dark;
       scroll-behavior: smooth;
@@ -120,13 +144,18 @@
       min-width: 280px;
       min-height: 100svh;
       margin: 0;
+
       background: var(--black);
       color: var(--white);
+
       font-family: var(--sans);
       font-synthesis: none;
+
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+
       text-rendering: optimizeLegibility;
+
       overflow-x: clip;
     }
 
@@ -142,43 +171,58 @@
 
     body::after {
       content: "";
+
       position: fixed;
       inset: 0;
       z-index: 100;
+
       pointer-events: none;
+
       opacity: .008;
+
       background-image:
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
     .page {
       min-height: 100svh;
+
       display: flex;
       flex-direction: column;
+
       padding:
-        var(--top)
-        var(--gutter)
-        max(var(--top), env(safe-area-inset-bottom));
+        max(var(--top), env(safe-area-inset-top))
+        max(var(--gutter), env(safe-area-inset-right))
+        max(var(--top), env(safe-area-inset-bottom))
+        max(var(--gutter), env(safe-area-inset-left));
     }
 
     .header {
+      position: relative;
+      z-index: 2;
+
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      position: relative;
-      z-index: 2;
+
       animation:
-        header-in .8s cubic-bezier(.16,1,.3,1) both;
+        header-in .8s var(--ease) both;
     }
 
     .brand {
       display: inline-flex;
       align-items: baseline;
+
+      color: var(--white);
+
       font-size: .8rem;
       font-weight: 540;
+
       line-height: 1;
+
       letter-spacing: -.045em;
       text-transform: uppercase;
+
       transition: opacity .3s ease;
     }
 
@@ -186,14 +230,17 @@
       opacity: .55;
     }
 
-    .brand:focus-visible {
+    .brand:focus-visible,
+    .status:focus-visible {
       outline: 1px solid var(--white);
       outline-offset: 7px;
     }
 
     .brand-sub {
       margin-left: .38rem;
+
       color: var(--secondary);
+
       font-weight: 400;
     }
 
@@ -201,11 +248,16 @@
       display: flex;
       align-items: center;
       gap: .6rem;
+
       color: var(--secondary);
+
       font-family: var(--mono);
+
       font-size: .65rem;
       font-weight: 450;
+
       line-height: 1.4;
+
       letter-spacing: .045em;
       text-transform: uppercase;
     }
@@ -213,17 +265,24 @@
     .status-dot {
       width: 5px;
       height: 5px;
+
       flex: 0 0 5px;
+
       border-radius: 50%;
+
       background: var(--white);
-      animation: pulse 3.4s ease-in-out infinite;
+
+      animation:
+        pulse 3.4s ease-in-out infinite;
     }
 
     main {
       flex: 1;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       padding:
         clamp(5rem, 11vh, 9rem)
         0
@@ -234,59 +293,89 @@
       display: flex;
       align-items: center;
       gap: .9rem;
+
       width: fit-content;
-      margin-bottom: clamp(2rem, 3vw, 3.35rem);
+
+      margin-bottom:
+        clamp(2rem, 3vw, 3.35rem);
+
       color: var(--secondary);
+
       font-family: var(--mono);
+
       font-size: .69rem;
       font-weight: 450;
+
       line-height: 1.4;
+
       letter-spacing: .025em;
       text-transform: uppercase;
+
       animation:
-        fade-up .9s .05s cubic-bezier(.16,1,.3,1) both;
+        fade-up .9s .05s var(--ease) both;
     }
 
     .meta-rule {
       width: 2.15rem;
       height: 1px;
+
       flex: 0 0 2.15rem;
+
       background: var(--line);
     }
 
     .hero {
       position: relative;
+
       width: 100%;
-      padding-bottom: clamp(.65rem, .9vw, 1.1rem);
+
+      padding-bottom:
+        clamp(.65rem, .9vw, 1.1rem);
     }
 
     .hero h1 {
       width: min(100%, 1800px);
+
       margin: 0;
+
       color: var(--white);
+
       font-family: var(--sans);
+
       font-size: var(--display);
       font-weight: 430;
+
       line-height: .96;
+
       letter-spacing: -.075em;
+
       font-kerning: normal;
       text-wrap: balance;
     }
 
     .hero-line {
       display: block;
+
       position: relative;
-      padding: 0 .07em .09em;
+
+      padding:
+        0 .07em .09em;
+
       margin-bottom: -.09em;
+
       overflow: visible;
     }
 
     .hero-line > span {
       display: block;
-      transform: translate3d(0, 104%, 0);
+
+      transform:
+        translate3d(0, 104%, 0);
+
       will-change: transform;
+
       animation:
-        hero-reveal 1.08s cubic-bezier(.16,1,.3,1) forwards;
+        hero-reveal 1.08s var(--ease) forwards;
     }
 
     .hero-line:nth-child(1) > span {
@@ -303,80 +392,118 @@
 
     .index {
       position: absolute;
+
       top: 50%;
       right: 0;
+
       display: flex;
       align-items: center;
       gap: .65rem;
+
       color: var(--tertiary);
+
       font-family: var(--mono);
+
       font-size: .62rem;
       font-weight: 450;
+
       line-height: 1;
+
       letter-spacing: .055em;
+
       transform:
         translateY(-50%)
         rotate(90deg);
+
       transform-origin: right center;
+
       opacity: 0;
+
       animation:
-        index-in .8s .8s cubic-bezier(.16,1,.3,1) forwards;
+        index-in .8s .8s var(--ease) forwards;
     }
 
     .index-line {
       width: 1.75rem;
       height: 1px;
+
       background: var(--line);
     }
 
     .information {
       width: min(100%, 1440px);
+
       display: grid;
+
       grid-template-columns:
-        minmax(145px,.55fr)
-        minmax(300px,1.65fr)
-        minmax(220px,.7fr);
-      column-gap: clamp(2.5rem, 6.4vw, 7.25rem);
-      margin-top: clamp(4.35rem, 6.7vw, 7.25rem);
+        minmax(145px, .55fr)
+        minmax(300px, 1.65fr)
+        minmax(220px, .7fr);
+
+      column-gap:
+        clamp(2.5rem, 6.4vw, 7.25rem);
+
+      margin-top:
+        clamp(4.35rem, 6.7vw, 7.25rem);
+
       animation:
-        fade-up .95s .38s cubic-bezier(.16,1,.3,1) both;
+        fade-up .95s .38s var(--ease) both;
     }
 
     .label {
       margin-bottom: .72rem;
+
       color: var(--secondary);
+
       font-family: var(--mono);
+
       font-size: .64rem;
       font-weight: 450;
+
       line-height: 1.45;
+
       letter-spacing: .055em;
       text-transform: uppercase;
     }
 
     .identity {
       margin: 0;
+
+      color: var(--white);
+
       font-size: 1rem;
       font-weight: 520;
+
       line-height: 1.35;
+
       letter-spacing: -.025em;
     }
 
     .location {
       margin-top: .28rem;
+
       color: var(--secondary);
+
       font-size: .76rem;
       font-weight: 400;
+
       line-height: 1.45;
     }
 
     .statement {
       max-width: 40rem;
+
       margin: 0;
+
       color: var(--white);
+
       font-size: var(--body);
       font-weight: 400;
+
       line-height: 1.54;
+
       letter-spacing: -.015em;
+
       text-wrap: pretty;
     }
 
@@ -386,6 +513,7 @@
 
     .progress {
       width: 100%;
+
       align-self: end;
     }
 
@@ -393,12 +521,18 @@
       display: flex;
       align-items: baseline;
       justify-content: space-between;
+
       margin-bottom: .78rem;
+
       color: var(--secondary);
+
       font-family: var(--mono);
+
       font-size: .63rem;
       font-weight: 450;
+
       line-height: 1.4;
+
       letter-spacing: .045em;
       text-transform: uppercase;
     }
@@ -406,35 +540,54 @@
     .progress-track {
       width: 100%;
       height: 1px;
+
       overflow: hidden;
+
       background: var(--line);
     }
 
     .progress-fill {
-      width: 32%;
+      width: 100%;
       height: 100%;
+
       background: var(--white);
-      transform: scaleX(0);
+
+      transform:
+        scaleX(0);
+
       transform-origin: left center;
+
       animation:
-        progress 1.25s .7s cubic-bezier(.16,1,.3,1) forwards;
+        progress 1.25s .7s var(--ease) forwards;
     }
 
     .footer {
       display: grid;
+
       grid-template-columns: 1fr auto 1fr;
+
       align-items: end;
+
       padding-top: 16px;
-      border-top: 1px solid var(--line-soft);
+
+      border-top:
+        1px solid var(--line-soft);
+
       color: var(--secondary);
+
       font-family: var(--mono);
+
       font-size: .61rem;
       font-weight: 450;
+
       line-height: 1.45;
+
       letter-spacing: .045em;
+
       text-transform: uppercase;
+
       animation:
-        fade-up .9s .62s cubic-bezier(.16,1,.3,1) both;
+        fade-up .9s .62s var(--ease) both;
     }
 
     .footer-center {
@@ -451,7 +604,8 @@
       }
 
       .hero h1 {
-        font-size: clamp(8rem, 7.7vw, 10.8rem);
+        font-size:
+          clamp(8rem, 7.7vw, 10.8rem);
       }
 
       .information {
@@ -464,7 +618,8 @@
       and (max-width: 1399px) {
 
       :root {
-        --display: clamp(5rem, 7.15vw, 8.7rem);
+        --display:
+          clamp(5rem, 7.15vw, 8.7rem);
       }
 
       main {
@@ -473,13 +628,15 @@
       }
 
       .information {
-        column-gap: clamp(2.25rem, 4.8vw, 4.8rem);
+        column-gap:
+          clamp(2.25rem, 4.8vw, 4.8rem);
       }
     }
 
     @media (max-width: 900px) {
       :root {
-        --display: clamp(4rem, 8.15vw, 7.3rem);
+        --display:
+          clamp(4rem, 8.15vw, 7.3rem);
       }
 
       .index {
@@ -488,14 +645,18 @@
 
       .information {
         grid-template-columns:
-          minmax(135px,.65fr)
-          minmax(280px,1.6fr);
+          minmax(135px, .65fr)
+          minmax(280px, 1.6fr);
+
         row-gap: 3.25rem;
-        column-gap: clamp(2rem, 5.8vw, 4.25rem);
+
+        column-gap:
+          clamp(2rem, 5.8vw, 4.25rem);
       }
 
       .progress {
         grid-column: 1 / -1;
+
         width: min(100%, 580px);
       }
     }
@@ -525,14 +686,19 @@
 
       .status {
         max-width: 145px;
+
         justify-content: flex-end;
+
         font-size: .59rem;
+
         line-height: 1.45;
+
         text-align: right;
       }
 
       main {
         justify-content: flex-start;
+
         padding:
           clamp(5.75rem, 13vh, 7.75rem)
           0
@@ -541,7 +707,9 @@
 
       .meta {
         gap: .68rem;
+
         margin-bottom: 2.05rem;
+
         font-size: .64rem;
       }
 
@@ -560,14 +728,18 @@
       }
 
       .hero-line {
-        padding: 0 .035em .125em;
+        padding:
+          0 .035em .125em;
+
         margin-bottom: -.125em;
       }
 
       .information {
         display: flex;
         flex-direction: column;
+
         gap: 2.7rem;
+
         margin-top: 4.2rem;
       }
 
@@ -585,7 +757,9 @@
 
       .statement {
         max-width: 34rem;
+
         line-height: 1.56;
+
         letter-spacing: -.012em;
       }
 
@@ -599,6 +773,7 @@
 
       .footer {
         grid-template-columns: 1fr 1fr;
+
         font-size: .59rem;
       }
 
@@ -660,7 +835,8 @@
       }
 
       :root {
-        --display: clamp(3.45rem, 8.15vw, 6.5rem);
+        --display:
+          clamp(3.45rem, 8.15vw, 6.5rem);
       }
 
       .information {
@@ -691,6 +867,29 @@
       }
     }
 
+    @media (prefers-contrast: more) {
+      :root {
+        --secondary: #c2c1bb;
+        --tertiary: #999892;
+        --line: #3a3a37;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+
+      body::after {
+        display: none;
+      }
+
+      .page {
+        min-height: auto;
+      }
+    }
+
     @keyframes header-in {
       from {
         opacity: 0;
@@ -717,17 +916,20 @@
 
     @keyframes hero-reveal {
       from {
-        transform: translate3d(0, 104%, 0);
+        transform:
+          translate3d(0, 104%, 0);
       }
 
       to {
-        transform: translate3d(0, 0, 0);
+        transform:
+          translate3d(0, 0, 0);
       }
     }
 
     @keyframes index-in {
       from {
         opacity: 0;
+
         transform:
           translateY(-50%)
           translateX(10px)
@@ -736,6 +938,7 @@
 
       to {
         opacity: 1;
+
         transform:
           translateY(-50%)
           translateX(0)
@@ -754,7 +957,8 @@
     }
 
     @keyframes pulse {
-      0%, 100% {
+      0%,
+      100% {
         opacity: 1;
       }
 
@@ -783,12 +987,16 @@
         </span>
       </a>
 
-      <div class="status">
+      <div
+        class="status"
+        aria-label="Progetto in costruzione"
+      >
         <span
           class="status-dot"
           aria-hidden="true"
         ></span>
-        In sviluppo
+
+        In costruzione
       </div>
 
     </header>
@@ -888,7 +1096,7 @@
               Una community digitale per Partinico.
             </strong>
 
-            Persone, idee e possibilità
+            Un luogo per persone, idee e possibilità
             che prendono forma sul territorio.
 
           </p>
@@ -901,22 +1109,19 @@
           <div class="progress-head">
 
             <span>
-              Sviluppo
+              Stato
             </span>
 
             <span>
-              32%
+              Prima fase
             </span>
 
           </div>
 
           <div
             class="progress-track"
-            role="progressbar"
-            aria-label="Avanzamento dello sviluppo"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            aria-valuenow="32"
+            role="presentation"
+            aria-hidden="true"
           >
 
             <div class="progress-fill"></div>
