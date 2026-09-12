@@ -1,4 +1,4 @@
-dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
+<!doctype html>
 <html lang="it">
 <head>
   <meta charset="utf-8">
@@ -16,7 +16,11 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
   >
 
   <meta name="author" content="Partinico">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  >
 
   <link
     rel="canonical"
@@ -153,7 +157,6 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
 
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-
       text-rendering: optimizeLegibility;
 
       overflow-x: clip;
@@ -167,6 +170,11 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 1px solid var(--white);
+      outline-offset: 7px;
     }
 
     body::after {
@@ -238,9 +246,7 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
 
     .brand-sub {
       margin-left: .38rem;
-
       color: var(--secondary);
-
       font-weight: 400;
     }
 
@@ -252,12 +258,10 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
       color: var(--secondary);
 
       font-family: var(--mono);
-
       font-size: .65rem;
       font-weight: 450;
 
       line-height: 1.4;
-
       letter-spacing: .045em;
       text-transform: uppercase;
     }
@@ -269,7 +273,6 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
       flex: 0 0 5px;
 
       border-radius: 50%;
-
       background: var(--white);
 
       animation:
@@ -302,12 +305,10 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
       color: var(--secondary);
 
       font-family: var(--mono);
-
       font-size: .69rem;
       font-weight: 450;
 
       line-height: 1.4;
-
       letter-spacing: .025em;
       text-transform: uppercase;
 
@@ -326,7 +327,6 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
 
     .hero {
       position: relative;
-
       width: 100%;
 
       padding-bottom:
@@ -341,12 +341,10 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
       color: var(--white);
 
       font-family: var(--sans);
-
       font-size: var(--display);
       font-weight: 430;
 
       line-height: .96;
-
       letter-spacing: -.075em;
 
       font-kerning: normal;
@@ -355,7 +353,6 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
 
     .hero-line {
       display: block;
-
       position: relative;
 
       padding:
@@ -403,12 +400,10 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
       color: var(--tertiary);
 
       font-family: var(--mono);
-
       font-size: .62rem;
       font-weight: 450;
 
       line-height: 1;
-
       letter-spacing: .055em;
 
       transform:
@@ -426,7 +421,6 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
     .index-line {
       width: 1.75rem;
       height: 1px;
-
       background: var(--line);
     }
 
@@ -456,12 +450,10 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
       color: var(--secondary);
 
       font-family: var(--mono);
-
       font-size: .64rem;
       font-weight: 450;
 
       line-height: 1.45;
-
       letter-spacing: .055em;
       text-transform: uppercase;
     }
@@ -475,7 +467,6 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
       font-weight: 520;
 
       line-height: 1.35;
-
       letter-spacing: -.025em;
     }
 
@@ -500,394 +491,71 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
       font-size: var(--body);
       font-weight: 400;
 
-      line-height: 1.54;
+      line-height: 1.42;
+      letter-spacing: -.025em;
+    }
 
+    .project {
+      justify-self: end;
+      width: min(100%, 260px);
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+
+      color: var(--white);
+
+      font-size: .8rem;
+      font-weight: 520;
+
+      line-height: 1.35;
       letter-spacing: -.015em;
 
-      text-wrap: pretty;
+      transition:
+        opacity .3s ease,
+        transform .3s ease;
     }
 
-    .statement strong {
-      font-weight: 540;
+    .project-link:hover {
+      opacity: .6;
+      transform: translateX(3px);
     }
 
-    .progress {
-      width: 100%;
+    .project-link::after {
+      content: "↗";
 
-      align-self: end;
+      color: var(--secondary);
+
+      font-size: .85rem;
     }
 
-    .progress-head {
+    footer {
       display: flex;
-      align-items: baseline;
+      align-items: flex-end;
       justify-content: space-between;
 
-      margin-bottom: .78rem;
+      padding-top: 1.5rem;
 
-      color: var(--secondary);
-
-      font-family: var(--mono);
-
-      font-size: .63rem;
-      font-weight: 450;
-
-      line-height: 1.4;
-
-      letter-spacing: .045em;
-      text-transform: uppercase;
-    }
-
-    .progress-track {
-      width: 100%;
-      height: 1px;
-
-      overflow: hidden;
-
-      background: var(--line);
-    }
-
-    .progress-fill {
-      width: 100%;
-      height: 100%;
-
-      background: var(--white);
-
-      transform:
-        scaleX(0);
-
-      transform-origin: left center;
-
-      animation:
-        progress 1.25s .7s var(--ease) forwards;
-    }
-
-    .footer {
-      display: grid;
-
-      grid-template-columns: 1fr auto 1fr;
-
-      align-items: end;
-
-      padding-top: 16px;
-
-      border-top:
-        1px solid var(--line-soft);
-
-      color: var(--secondary);
+      color: var(--tertiary);
 
       font-family: var(--mono);
-
-      font-size: .61rem;
+      font-size: .6rem;
       font-weight: 450;
 
       line-height: 1.45;
-
       letter-spacing: .045em;
-
       text-transform: uppercase;
 
+      border-top: 1px solid var(--line-soft);
+
       animation:
-        fade-up .9s .62s var(--ease) both;
+        fade-up .8s .5s var(--ease) both;
     }
 
-    .footer-center {
-      text-align: center;
-    }
-
-    .footer-right {
+    footer span:last-child {
       text-align: right;
-    }
-
-    @media (min-width: 1600px) {
-      :root {
-        --gutter: 3.75rem;
-      }
-
-      .hero h1 {
-        font-size:
-          clamp(8rem, 7.7vw, 10.8rem);
-      }
-
-      .information {
-        width: min(100%, 1520px);
-      }
-    }
-
-    @media
-      (min-width: 901px)
-      and (max-width: 1399px) {
-
-      :root {
-        --display:
-          clamp(5rem, 7.15vw, 8.7rem);
-      }
-
-      main {
-        padding-top: 7rem;
-        padding-bottom: 5.75rem;
-      }
-
-      .information {
-        column-gap:
-          clamp(2.25rem, 4.8vw, 4.8rem);
-      }
-    }
-
-    @media (max-width: 900px) {
-      :root {
-        --display:
-          clamp(4rem, 8.15vw, 7.3rem);
-      }
-
-      .index {
-        display: none;
-      }
-
-      .information {
-        grid-template-columns:
-          minmax(135px, .65fr)
-          minmax(280px, 1.6fr);
-
-        row-gap: 3.25rem;
-
-        column-gap:
-          clamp(2rem, 5.8vw, 4.25rem);
-      }
-
-      .progress {
-        grid-column: 1 / -1;
-
-        width: min(100%, 580px);
-      }
-    }
-
-    @media (max-width: 640px) {
-      :root {
-        --gutter: 1.15rem;
-        --top: 1.15rem;
-
-        --display:
-          clamp(
-            3.35rem,
-            calc(10.1vw + 1.18rem),
-            5.35rem
-          );
-
-        --body: 1rem;
-      }
-
-      .brand {
-        font-size: .74rem;
-      }
-
-      .brand-sub {
-        margin-left: .28rem;
-      }
-
-      .status {
-        max-width: 145px;
-
-        justify-content: flex-end;
-
-        font-size: .59rem;
-
-        line-height: 1.45;
-
-        text-align: right;
-      }
-
-      main {
-        justify-content: flex-start;
-
-        padding:
-          clamp(5.75rem, 13vh, 7.75rem)
-          0
-          4.25rem;
-      }
-
-      .meta {
-        gap: .68rem;
-
-        margin-bottom: 2.05rem;
-
-        font-size: .64rem;
-      }
-
-      .meta-rule {
-        width: 1.4rem;
-        flex-basis: 1.4rem;
-      }
-
-      .hero {
-        padding-bottom: .85rem;
-      }
-
-      .hero h1 {
-        line-height: .99;
-        letter-spacing: -.067em;
-      }
-
-      .hero-line {
-        padding:
-          0 .035em .125em;
-
-        margin-bottom: -.125em;
-      }
-
-      .information {
-        display: flex;
-        flex-direction: column;
-
-        gap: 2.7rem;
-
-        margin-top: 4.2rem;
-      }
-
-      .label {
-        margin-bottom: .67rem;
-      }
-
-      .identity {
-        font-size: 1rem;
-      }
-
-      .location {
-        font-size: .75rem;
-      }
-
-      .statement {
-        max-width: 34rem;
-
-        line-height: 1.56;
-
-        letter-spacing: -.012em;
-      }
-
-      .progress {
-        width: 100%;
-      }
-
-      .progress-head {
-        font-size: .61rem;
-      }
-
-      .footer {
-        grid-template-columns: 1fr 1fr;
-
-        font-size: .59rem;
-      }
-
-      .footer-center {
-        display: none;
-      }
-    }
-
-    @media (max-width: 390px) {
-      :root {
-        --display:
-          clamp(
-            3.2rem,
-            calc(9.8vw + 1.1rem),
-            4.55rem
-          );
-      }
-
-      main {
-        padding-top: 5.35rem;
-      }
-
-      .meta {
-        font-size: .6rem;
-      }
-
-      .statement {
-        font-size: .98rem;
-      }
-    }
-
-    @media
-      (max-width: 640px)
-      and (max-height: 700px) {
-
-      main {
-        padding-top: 4.65rem;
-        padding-bottom: 3.6rem;
-      }
-
-      .meta {
-        margin-bottom: 1.7rem;
-      }
-
-      .information {
-        margin-top: 3.55rem;
-        gap: 2.25rem;
-      }
-    }
-
-    @media
-      (max-width: 900px)
-      and (orientation: landscape)
-      and (max-height: 600px) {
-
-      main {
-        padding-top: 3.8rem;
-        padding-bottom: 3rem;
-      }
-
-      :root {
-        --display:
-          clamp(3.45rem, 8.15vw, 6.5rem);
-      }
-
-      .information {
-        margin-top: 3.15rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation-duration: .01ms !important;
-        animation-delay: 0ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-      }
-
-      .hero-line > span {
-        transform: none;
-      }
-
-      .progress-fill {
-        transform: scaleX(1);
-      }
-    }
-
-    @media (prefers-contrast: more) {
-      :root {
-        --secondary: #c2c1bb;
-        --tertiary: #999892;
-        --line: #3a3a37;
-      }
-    }
-
-    @media print {
-      body {
-        background: white;
-        color: black;
-      }
-
-      body::after {
-        display: none;
-      }
-
-      .page {
-        min-height: auto;
-      }
     }
 
     @keyframes header-in {
@@ -916,119 +584,244 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
 
     @keyframes hero-reveal {
       from {
-        transform:
-          translate3d(0, 104%, 0);
+        transform: translate3d(0, 104%, 0);
       }
 
       to {
-        transform:
-          translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
       }
     }
 
     @keyframes index-in {
       from {
         opacity: 0;
-
-        transform:
-          translateY(-50%)
-          translateX(10px)
-          rotate(90deg);
       }
 
       to {
         opacity: 1;
-
-        transform:
-          translateY(-50%)
-          translateX(0)
-          rotate(90deg);
-      }
-    }
-
-    @keyframes progress {
-      from {
-        transform: scaleX(0);
-      }
-
-      to {
-        transform: scaleX(1);
       }
     }
 
     @keyframes pulse {
       0%,
       100% {
-        opacity: 1;
+        opacity: .35;
       }
 
       50% {
-        opacity: .35;
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .information {
+        grid-template-columns:
+          minmax(130px, .6fr)
+          minmax(260px, 1.5fr);
+      }
+
+      .project {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 2.2rem;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding:
+          max(1.1rem, env(safe-area-inset-top))
+          max(1.1rem, env(safe-area-inset-right))
+          max(1.1rem, env(safe-area-inset-bottom))
+          max(1.1rem, env(safe-area-inset-left));
+      }
+
+      .header {
+        align-items: center;
+      }
+
+      .status {
+        font-size: .58rem;
+      }
+
+      main {
+        justify-content: flex-start;
+
+        padding:
+          clamp(5.5rem, 15vh, 8rem)
+          0
+          4rem;
+      }
+
+      .hero h1 {
+        font-size:
+          clamp(3.35rem, 15vw, 7rem);
+
+        line-height: .94;
+      }
+
+      .index {
+        display: none;
+      }
+
+      .information {
+        grid-template-columns: 1fr;
+
+        row-gap: 2.8rem;
+
+        margin-top: 4.2rem;
+      }
+
+      .project {
+        grid-column: auto;
+
+        width: auto;
+        margin-top: 0;
+      }
+
+      .statement {
+        max-width: 34rem;
+      }
+
+      footer {
+        gap: 1rem;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand {
+        font-size: .72rem;
+      }
+
+      .status {
+        gap: .4rem;
+        font-size: .52rem;
+      }
+
+      .status-dot {
+        width: 4px;
+        height: 4px;
+        flex-basis: 4px;
+      }
+
+      main {
+        padding-top: 5rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 16vw, 4.5rem);
+        letter-spacing: -.07em;
+      }
+
+      .information {
+        margin-top: 3.5rem;
+      }
+
+      footer {
+        font-size: .54rem;
+      }
+    }
+
+    @media (orientation: landscape) and (max-height: 600px) {
+      main {
+        padding:
+          4rem
+          0
+          3rem;
+      }
+
+      .hero h1 {
+        font-size:
+          clamp(3rem, 10vw, 6.5rem);
+      }
+
+      .information {
+        margin-top: 3.5rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .hero-line > span {
+        transform: none;
+      }
+
+      .index {
+        opacity: 1;
+      }
+    }
+
+    @media print {
+      body::after {
+        display: none;
+      }
+
+      .page {
+        min-height: auto;
+      }
+
+      .hero-line > span {
+        transform: none;
+      }
+
+      .index {
+        display: none;
+      }
+
+      footer {
+        color: #333;
+        border-color: #ccc;
       }
     }
   </style>
 </head>
 
 <body>
-
   <div class="page">
 
     <header class="header">
-
       <a
         class="brand"
         href="/"
-        aria-label="Partinico"
+        aria-label="Partinico Digital Community — home"
       >
         PARTINICO
-
-        <span class="brand-sub">
-          / Digital Community
-        </span>
+        <span class="brand-sub">/ Digital Community</span>
       </a>
 
       <div
         class="status"
-        aria-label="Progetto in costruzione"
+        aria-label="Stato del progetto: in costruzione"
       >
         <span
           class="status-dot"
           aria-hidden="true"
         ></span>
-
         In costruzione
       </div>
-
     </header>
 
-
     <main>
-
-      <div class="meta">
-
-        <span>
-          Community / Sicilia
-        </span>
-
-        <span
-          class="meta-rule"
-          aria-hidden="true"
-        ></span>
-
-        <span>
-          2026
-        </span>
-
+      <div class="meta" aria-hidden="true">
+        <span class="meta-rule"></span>
+        Community / Sicilia 2026
       </div>
 
-
-      <section
-        class="hero"
-        aria-labelledby="hero-title"
-      >
-
-        <h1 id="hero-title">
-
+      <section class="hero" aria-labelledby="page-title">
+        <h1 id="page-title">
           <span class="hero-line">
             <span>Partinico,</span>
           </span>
@@ -1040,117 +833,64 @@ dove persone, idee e possibilità prendono forma nel territorio.<!doctype html>
           <span class="hero-line">
             <span>sta prendendo forma.</span>
           </span>
-
         </h1>
 
-
-        <div
-          class="index"
-          aria-hidden="true"
-        >
-
+        <div class="index" aria-hidden="true">
           <span>01</span>
-
-          <span
-            class="index-line"
-          ></span>
-
+          <span class="index-line"></span>
           <span>01</span>
-
         </div>
-
       </section>
-
 
       <section
         class="information"
-        aria-label="Informazioni sulla community digitale di Partinico"
+        aria-label="Informazioni sul progetto"
       >
-
         <div>
-
-          <div class="label">
-            Luogo
-          </div>
+          <div class="label">Luogo</div>
 
           <p class="identity">
             Partinico
           </p>
 
-          <div class="location">
+          <p class="location">
             Sicilia, Italia
-          </div>
-
+          </p>
         </div>
-
 
         <div>
-
-          <div class="label">
-            Progetto
-          </div>
+          <div class="label">Progetto</div>
 
           <p class="statement">
-
-            <strong>
-              La community digitale di Partinico,
-            </strong>
-
-            dove persone, idee e possibilità diventano realtà.
-
+            La community digitale di Partinico,
+            dove persone, idee e possibilità
+            diventano realtà.
           </p>
-
         </div>
 
+        <div class="project">
+          <div class="label">Stato</div>
 
-        <div class="progress">
-
-          <div class="progress-head">
-
-            <span>
-              Stato
-            </span>
-
-            <span>
-              Prima fase
-            </span>
-
-          </div>
-
-          <div
-            class="progress-track"
-            role="presentation"
-            aria-hidden="true"
+          <a
+            class="project-link"
+            href="https://cesareparatore.github.io/community/"
+            aria-label="Scopri la Comunità di Cesare Paratore"
           >
-
-            <div class="progress-fill"></div>
-
-          </div>
-
+            Prima fase
+          </a>
         </div>
-
       </section>
-
     </main>
 
+    <footer>
+      <span>© 2026 PARTINICO</span>
 
-    <footer class="footer">
-
-      <div>
-        © 2026 PARTINICO
-      </div>
-
-      <div class="footer-center">
-        Sicilia / Italia
-      </div>
-
-      <div class="footer-right">
+      <span>
+        Sicilia / Italia<br>
         Digital Community — 01 / 01
-      </div>
-
+      </span>
     </footer>
 
   </div>
-
 </body>
 </html>
