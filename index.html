@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="it">
 <head>
+
   <meta charset="utf-8">
 
   <meta
@@ -9,12 +10,12 @@
   >
 
   <title>
-    Partinico: storia, territorio, luoghi, cultura, attività ed eventi
+    Partinico, Sicilia: storia, territorio, luoghi, cultura ed eventi
   </title>
 
   <meta
     name="description"
-    content="Partinico, Sicilia: storia, territorio, luoghi, cultura, monumenti, biblioteca, attività, eventi e vita della comunità. Una guida digitale documentata dedicata a Partinico."
+    content="Partinico in Sicilia: storia, territorio, popolazione, monumenti, luoghi, cultura, attività ed eventi. Una guida digitale documentata dedicata alla città e al suo territorio."
   >
 
   <meta
@@ -30,6 +31,11 @@
   <meta
     name="theme-color"
     content="#0b2538"
+  >
+
+  <meta
+    name="format-detection"
+    content="telephone=no"
   >
 
   <link
@@ -62,12 +68,12 @@
 
   <meta
     property="og:title"
-    content="Partinico: storia, territorio, luoghi, cultura, attività ed eventi"
+    content="Partinico, Sicilia: storia, territorio, luoghi, cultura ed eventi"
   >
 
   <meta
     property="og:description"
-    content="Guida digitale a Partinico: storia, territorio, luoghi, cultura, monumenti, attività, eventi e comunità."
+    content="Guida digitale a Partinico: storia, territorio, popolazione, luoghi, cultura, attività ed eventi."
   >
 
   <meta
@@ -85,7 +91,7 @@
     content="Partinico, Sicilia"
   >
 
-  <!-- Twitter / X -->
+  <!-- X -->
 
   <meta
     name="twitter:card"
@@ -94,12 +100,12 @@
 
   <meta
     name="twitter:title"
-    content="Partinico: storia, territorio, luoghi, cultura, attività ed eventi"
+    content="Partinico, Sicilia: storia, territorio, luoghi, cultura ed eventi"
   >
 
   <meta
     name="twitter:description"
-    content="Tutto quello che c'è da sapere su Partinico, dalla storia ai luoghi, dalla cultura alla vita della comunità."
+    content="Guida digitale a Partinico: storia, territorio, popolazione, luoghi, cultura, attività ed eventi."
   >
 
   <meta
@@ -107,11 +113,15 @@
     content="https://partinico.github.io/assets/images/partinico-og.jpg"
   >
 
+  <!-- Icons -->
+
   <link
     rel="icon"
     href="/favicon.svg"
     type="image/svg+xml"
   >
+
+  <!-- Fonts -->
 
   <link
     rel="preconnect"
@@ -125,7 +135,7 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
     rel="stylesheet"
   >
 
@@ -142,8 +152,11 @@
         "url": "https://partinico.github.io/",
         "name": "Partinico",
         "alternateName": "Partinico Digital Community",
-        "description": "Guida digitale indipendente dedicata a Partinico, al suo territorio, alla sua storia e alla sua comunità.",
-        "inLanguage": "it-IT"
+        "description": "Guida digitale indipendente dedicata a Partinico, alla sua storia, al territorio, ai luoghi e alla comunità.",
+        "inLanguage": "it-IT",
+        "publisher": {
+          "@id": "https://partinico.github.io/#organization"
+        }
       },
 
       {
@@ -159,29 +172,47 @@
         "@id": "https://partinico.github.io/#partinico",
         "name": "Partinico",
         "alternateName": "Comune di Partinico",
+        "identifier": "082054",
         "url": "https://partinico.github.io/",
-        "containedInPlace": {
-          "@type": "AdministrativeArea",
-          "name": "Città Metropolitana di Palermo"
-        },
-        "containedInPlace": {
-          "@type": "AdministrativeArea",
-          "name": "Sicilia"
-        }
+        "containedInPlace": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Città Metropolitana di Palermo"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Sicilia"
+          },
+          {
+            "@type": "Country",
+            "name": "Italia"
+          }
+        ],
+        "sameAs": [
+          "https://www.comune.partinico.pa.it/"
+        ]
       },
 
       {
         "@type": "WebPage",
         "@id": "https://partinico.github.io/#webpage",
         "url": "https://partinico.github.io/",
-        "name": "Partinico: storia, territorio, luoghi, cultura, attività ed eventi",
+        "name": "Partinico, Sicilia: storia, territorio, luoghi, cultura ed eventi",
+        "description": "Guida digitale documentata dedicata a Partinico e al suo territorio.",
         "isPartOf": {
           "@id": "https://partinico.github.io/#website"
         },
         "about": {
           "@id": "https://partinico.github.io/#partinico"
         },
-        "inLanguage": "it-IT"
+        "mainEntity": {
+          "@id": "https://partinico.github.io/#partinico"
+        },
+        "publisher": {
+          "@id": "https://partinico.github.io/#organization"
+        },
+        "inLanguage": "it-IT",
+        "dateModified": "2026-09-14"
       },
 
       {
@@ -195,6 +226,62 @@
             "item": "https://partinico.github.io/"
           }
         ]
+      },
+
+      {
+        "@type": "ItemList",
+        "@id": "https://partinico.github.io/#topics",
+        "name": "Esplora Partinico",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Territorio di Partinico",
+            "url": "https://partinico.github.io/territorio/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Storia di Partinico",
+            "url": "https://partinico.github.io/storia/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Luoghi di Partinico",
+            "url": "https://partinico.github.io/luoghi/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Cultura di Partinico",
+            "url": "https://partinico.github.io/cultura/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Attività a Partinico",
+            "url": "https://partinico.github.io/attivita/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Eventi a Partinico",
+            "url": "https://partinico.github.io/eventi/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Comunità di Partinico",
+            "url": "https://partinico.github.io/comunita/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Dati su Partinico",
+            "url": "https://partinico.github.io/dati/"
+          }
+        ]
       }
 
     ]
@@ -202,15 +289,16 @@
   </script>
 
   <style>
+
     :root {
       --navy: #0b2538;
       --navy-2: #123b55;
       --blue: #1d5f85;
       --gold: #d98a19;
-      --gold-dark: #9d5d08;
+      --gold-dark: #925807;
 
       --ink: #15232d;
-      --muted: #5c6b75;
+      --muted: #596b76;
 
       --paper: #ffffff;
       --soft: #f4f7f8;
@@ -254,6 +342,7 @@
 
       line-height: 1.7;
       text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
 
     img {
@@ -278,7 +367,6 @@
     .skip-link {
       position: fixed;
       z-index: 9999;
-
       top: 12px;
       left: 12px;
 
@@ -290,6 +378,7 @@
       border-radius: 8px;
 
       transform: translateY(-150%);
+      transition: transform .15s ease;
     }
 
     .skip-link:focus {
@@ -303,7 +392,7 @@
       z-index: 1000;
       top: 0;
 
-      background: rgba(255,255,255,.95);
+      background: rgba(255, 255, 255, .96);
 
       border-bottom: 1px solid var(--line);
 
@@ -323,13 +412,14 @@
     .brand {
       display: flex;
       align-items: center;
-
       gap: 12px;
 
       color: var(--navy);
 
       font-weight: 800;
       text-decoration: none;
+
+      flex-shrink: 0;
     }
 
     .brand-mark {
@@ -368,7 +458,6 @@
     nav ul {
       display: flex;
       align-items: center;
-
       gap: 22px;
 
       margin: 0;
@@ -386,7 +475,8 @@
       text-decoration: none;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a[aria-current="page"] {
       color: var(--gold-dark);
     }
 
@@ -430,9 +520,7 @@
     h2,
     h3 {
       margin: 0;
-
       line-height: 1.12;
-
       text-wrap: balance;
     }
 
@@ -450,6 +538,10 @@
       font-size: clamp(38px, 5vw, 62px);
 
       letter-spacing: -.04em;
+    }
+
+    h3 {
+      text-wrap: balance;
     }
 
     .section {
@@ -479,7 +571,7 @@
     }
 
     .section-header > p {
-      max-width: 510px;
+      max-width: 540px;
 
       margin: 0;
 
@@ -489,7 +581,7 @@
     }
 
     .copy {
-      max-width: 760px;
+      max-width: 780px;
 
       color: var(--muted);
 
@@ -501,11 +593,14 @@
       margin-bottom: 20px;
     }
 
+    .copy strong {
+      color: var(--ink);
+    }
+
     /* HERO */
 
     .hero {
       position: relative;
-
       overflow: hidden;
 
       padding: 105px 0 100px;
@@ -559,7 +654,7 @@
     }
 
     h1 {
-      max-width: 850px;
+      max-width: 900px;
 
       color: white;
 
@@ -570,7 +665,7 @@
     }
 
     .hero-subtitle {
-      max-width: 750px;
+      max-width: 780px;
 
       margin: 28px 0 0;
 
@@ -674,6 +769,51 @@
       font-size: 17px;
     }
 
+    /* QUICK ANSWERS */
+
+    .quick-facts {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 14px;
+
+      margin-top: 28px;
+    }
+
+    .quick-fact {
+      padding: 20px;
+
+      color: white;
+
+      background:
+        rgba(255,255,255,.07);
+
+      border:
+        1px solid rgba(255,255,255,.12);
+
+      border-radius: 14px;
+    }
+
+    .quick-fact strong {
+      display: block;
+
+      color: #f4bf64;
+
+      font-size: 22px;
+    }
+
+    .quick-fact span {
+      display: block;
+
+      margin-top: 2px;
+
+      color: #cbdbe4;
+
+      font-size: 12px;
+    }
+
     /* INTRO */
 
     .intro {
@@ -686,7 +826,7 @@
       align-items: start;
     }
 
-    /* TOPIC GRID */
+    /* TOPICS */
 
     .topic-grid {
       display: grid;
@@ -814,6 +954,16 @@
       font-size: 13px;
     }
 
+    .fact small {
+      display: block;
+
+      margin-top: 8px;
+
+      color: #7a8992;
+
+      font-size: 11px;
+    }
+
     .territory-panel {
       padding: 42px;
 
@@ -843,7 +993,7 @@
       color: #d8e4eb;
     }
 
-    /* FEATURED PLACES */
+    /* PLACES */
 
     .place-grid {
       display: grid;
@@ -865,6 +1015,16 @@
       border-radius: var(--radius);
 
       text-decoration: none;
+
+      transition:
+        transform .18s ease,
+        box-shadow .18s ease;
+    }
+
+    .place-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow: var(--shadow);
     }
 
     .place-card img {
@@ -972,6 +1132,61 @@
       color: var(--muted);
     }
 
+    /* INTENT BLOCK */
+
+    .intent-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .intent-card {
+      padding: 30px;
+
+      background: white;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: var(--radius);
+    }
+
+    .intent-card h3 {
+      color: var(--navy);
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+      font-size: 27px;
+    }
+
+    .intent-card p {
+      margin-bottom: 0;
+
+      color: var(--muted);
+    }
+
+    .intent-card a {
+      display: inline-flex;
+
+      margin-top: 18px;
+
+      color: var(--blue);
+
+      font-weight: 800;
+
+      text-decoration: none;
+    }
+
+    .intent-card a:hover {
+      text-decoration: underline;
+    }
+
     /* COMMUNITY */
 
     .community-grid {
@@ -1057,10 +1272,48 @@
       color: var(--muted);
     }
 
+    .source-box p + p {
+      margin-top: 15px;
+    }
+
     .source-box a {
       color: var(--blue);
 
       font-weight: 700;
+    }
+
+    /* FAQ */
+
+    .faq {
+      max-width: 900px;
+
+      margin-inline: auto;
+    }
+
+    details {
+      padding: 22px 0;
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+    summary {
+      cursor: pointer;
+
+      color: var(--navy);
+
+      font-weight: 800;
+
+      font-size: 18px;
+    }
+
+    details p {
+      max-width: 780px;
+
+      margin:
+        14px 0 0;
+
+      color: var(--muted);
     }
 
     /* CTA */
@@ -1100,6 +1353,10 @@
       color: #dce8ef;
 
       font-size: 18px;
+    }
+
+    .final-cta .button {
+      margin-top: 28px;
     }
 
     /* FOOTER */
@@ -1180,13 +1437,13 @@
 
     /* RESPONSIVE */
 
-    @media (max-width: 950px) {
+    @media (max-width: 1050px) {
 
       nav ul {
         gap: 12px;
       }
 
-      nav ul li:not(:last-child) {
+      nav ul li:nth-child(-n+3) {
         display: none;
       }
 
@@ -1203,12 +1460,20 @@
       }
 
       .place-grid,
-      .community-grid {
-        grid-template-columns: 1fr 1fr;
+      .community-grid,
+      .intent-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .quick-facts {
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
       .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+          1fr 1fr;
       }
     }
 
@@ -1237,9 +1502,11 @@
       .topic-grid,
       .place-grid,
       .community-grid,
+      .intent-grid,
       .facts,
       .sources,
-      .footer-grid {
+      .footer-grid,
+      .quick-facts {
         grid-template-columns: 1fr;
       }
 
@@ -1259,9 +1526,18 @@
         width: 100%;
       }
 
+      .hero-card {
+        padding: 25px;
+      }
+
+      .territory-panel {
+        padding: 30px;
+      }
+
       .footer-bottom {
         flex-direction: column;
       }
+
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1274,9 +1550,13 @@
       *::before {
         transition: none !important;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
@@ -1287,6 +1567,7 @@
   Vai al contenuto principale
 </a>
 
+
 <header class="site-header">
 
   <div class="container header-inner">
@@ -1296,6 +1577,7 @@
       href="/"
       aria-label="Partinico"
     >
+
       <span
         class="brand-mark"
         aria-hidden="true"
@@ -1309,7 +1591,9 @@
           guida digitale al territorio
         </small>
       </span>
+
     </a>
+
 
     <nav aria-label="Navigazione principale">
 
@@ -1359,7 +1643,10 @@
 
 <main id="contenuto">
 
-  <!-- HERO -->
+
+  <!-- =========================================================
+       HERO / PRIMARY ENTITY
+       ========================================================= -->
 
   <section
     class="hero"
@@ -1381,10 +1668,10 @@
         </h1>
 
         <p class="hero-subtitle">
-          Una guida digitale dedicata a Partinico:
-          il territorio, la storia, i luoghi, la cultura,
-          le attività, gli eventi e le persone che
-          costruiscono ogni giorno la vita della città.
+          Una guida digitale per conoscere Partinico:
+          dove si trova, com'è il territorio, qual è la sua
+          storia, cosa vedere, quali sono i suoi luoghi,
+          la cultura, le attività e gli eventi della città.
         </p>
 
         <div class="hero-actions">
@@ -1393,14 +1680,14 @@
             class="button button-primary"
             href="/luoghi/"
           >
-            Scopri Partinico
+            Scopri i luoghi di Partinico
           </a>
 
           <a
             class="button button-secondary"
             href="/storia/"
           >
-            La storia di Partinico
+            Leggi la storia di Partinico
           </a>
 
         </div>
@@ -1411,14 +1698,57 @@
       <aside class="hero-card">
 
         <strong>
-          Un progetto indipendente
+          Partinico in breve
         </strong>
 
         <p>
-          Partinico Digital Community raccoglie e organizza
-          informazioni pubbliche e verificabili per rendere
-          più facile conoscere Partinico e il suo territorio.
+          Partinico è un comune della Sicilia nord-occidentale
+          appartenente alla Città Metropolitana di Palermo.
+          La città e il suo territorio conservano una storia
+          stratificata, un patrimonio di luoghi e monumenti
+          e una vita comunitaria contemporanea.
         </p>
+
+
+        <div class="quick-facts">
+
+          <div class="quick-fact">
+            <strong>
+              30.929
+            </strong>
+            <span>
+              residenti · 1 gennaio 2026
+            </span>
+          </div>
+
+          <div class="quick-fact">
+            <strong>
+              108,06 km²
+            </strong>
+            <span>
+              superficie statistica
+            </span>
+          </div>
+
+          <div class="quick-fact">
+            <strong>
+              90047
+            </strong>
+            <span>
+              CAP
+            </span>
+          </div>
+
+          <div class="quick-fact">
+            <strong>
+              PA
+            </strong>
+            <span>
+              Città Metropolitana di Palermo
+            </span>
+          </div>
+
+        </div>
 
       </aside>
 
@@ -1427,7 +1757,9 @@
   </section>
 
 
-  <!-- INTRO -->
+  <!-- =========================================================
+       INTRO / ENTITY DEFINITION
+       ========================================================= -->
 
   <section
     class="section"
@@ -1439,42 +1771,43 @@
       <div>
 
         <p class="eyebrow">
-          Partinico
+          Conoscere Partinico
         </p>
 
         <h2 id="intro-title">
-          Una città si conosce
-          attraverso i suoi luoghi,
-          la sua storia e le sue persone.
+          Una città si comprende
+          attraverso territorio,
+          storia e persone.
         </h2>
 
       </div>
 
+
       <div class="copy">
 
         <p>
-          Partinico si trova nella Sicilia nord-occidentale,
-          nella Città Metropolitana di Palermo. Il territorio
-          comunale comprende una vasta area della piana
-          partinicese e zone collinari, con una storia
-          documentata che attraversa epoche antiche,
-          periodo romano, dominazioni medievali e formazione
-          della città moderna.
+          <strong>Partinico</strong> si trova nella Sicilia
+          nord-occidentale e appartiene alla Città Metropolitana
+          di Palermo. Il comune comprende una vasta area della
+          piana partinicese e una fascia collinare nella parte
+          meridionale del territorio.
         </p>
 
         <p>
-          Oggi Partinico è un centro di circa trentamila
-          residenti e rappresenta uno dei principali comuni
-          dell'area occidentale della Città Metropolitana
-          di Palermo.
+          La storia locale documentata attraversa una lunga
+          stratificazione: frequentazioni preistoriche,
+          insediamenti dell'età protostorica, periodo romano,
+          dominazione araba e normanna e formazione del centro
+          abitato medievale.
         </p>
 
         <p>
-          Questa guida nasce con un obiettivo semplice:
-          mettere ordine nelle informazioni su Partinico
-          e creare un punto di riferimento consultabile
-          per chi vive in città, per chi la visita e per
-          chi vuole conoscerne meglio storia e territorio.
+          Oggi Partinico è un centro di oltre trentamila residenti
+          e rappresenta uno dei principali comuni della Città
+          Metropolitana di Palermo per popolazione. Questa guida
+          raccoglie progressivamente informazioni sul territorio,
+          sulla storia, sui luoghi, sulla cultura, sulle attività,
+          sugli eventi e sulla comunità locale.
         </p>
 
       </div>
@@ -1484,7 +1817,9 @@
   </section>
 
 
-  <!-- TOPIC CLUSTER -->
+  <!-- =========================================================
+       TOPICAL CLUSTER
+       ========================================================= -->
 
   <section
     class="section section-soft"
@@ -1502,16 +1837,17 @@
           </p>
 
           <h2 id="topic-title">
-            Tutto parte da qui.
+            Tutto quello che vuoi
+            sapere su Partinico.
           </h2>
 
         </div>
 
         <p>
-          Le informazioni sono organizzate in sezioni
-          tematiche per permettere di approfondire ogni
-          aspetto della città senza concentrare tutto
-          in una sola pagina.
+          La homepage introduce i principali temi.
+          Ogni sezione conduce a una pagina dedicata,
+          costruita per approfondire uno specifico aspetto
+          della città e del territorio.
         </p>
 
       </div>
@@ -1533,9 +1869,9 @@
           </h3>
 
           <p>
-            Dove si trova Partinico, superficie, altitudine,
-            comuni confinanti, paesaggio e caratteristiche
-            geografiche.
+            Posizione geografica, superficie, altitudine,
+            comuni confinanti, pianura, colline e
+            caratteristiche fisiche del territorio.
           </p>
 
         </a>
@@ -1555,9 +1891,9 @@
           </h3>
 
           <p>
-            Dalla preistoria a Inico e Parthenicum,
-            dal periodo arabo-normanno alla nascita
-            dell'attuale centro urbano.
+            Dalla preistoria agli insediamenti sicani,
+            da Parthenicum al periodo arabo-normanno
+            fino alla formazione dell'attuale città.
           </p>
 
         </a>
@@ -1577,8 +1913,9 @@
           </h3>
 
           <p>
-            Edifici storici, ville, torri, monumenti,
-            palazzi, biblioteca e luoghi da conoscere.
+            Chiese, palazzi, ville, torri, cantine,
+            monumenti e altri luoghi storici e culturali
+            da conoscere a Partinico.
           </p>
 
         </a>
@@ -1598,8 +1935,9 @@
           </h3>
 
           <p>
-            Patrimonio storico e culturale, chiese,
-            biblioteca, monumenti e iniziative culturali.
+            Patrimonio storico e culturale, biblioteca,
+            istituzioni, iniziative e realtà culturali
+            della città.
           </p>
 
         </a>
@@ -1619,8 +1957,9 @@
           </h3>
 
           <p>
-            Attività economiche, servizi, professionisti,
-            imprese e realtà produttive del territorio.
+            Attività economiche, imprese, professionisti,
+            servizi e realtà produttive presenti
+            sul territorio.
           </p>
 
         </a>
@@ -1640,8 +1979,9 @@
           </h3>
 
           <p>
-            Manifestazioni, cultura, sport, iniziative
-            e appuntamenti pubblici a Partinico.
+            Manifestazioni, appuntamenti culturali,
+            sportivi e iniziative pubbliche
+            a Partinico.
           </p>
 
         </a>
@@ -1661,8 +2001,9 @@
           </h3>
 
           <p>
-            Associazioni, realtà sociali, iniziative
-            e persone che contribuiscono alla vita locale.
+            Associazioni, iniziative sociali e realtà
+            che contribuiscono alla vita quotidiana
+            della città.
           </p>
 
         </a>
@@ -1682,8 +2023,9 @@
           </h3>
 
           <p>
-            Popolazione, superficie, altitudine, densità
-            e principali informazioni statistiche.
+            Popolazione, superficie, densità, altitudine
+            e principali informazioni statistiche
+            sul comune.
           </p>
 
         </a>
@@ -1695,7 +2037,9 @@
   </section>
 
 
-  <!-- TERRITORY -->
+  <!-- =========================================================
+       TERRITORY
+       ========================================================= -->
 
   <section
     class="section"
@@ -1717,56 +2061,90 @@
         <div class="copy">
 
           <p>
-            Partinico si trova nella parte nord-occidentale
-            della Sicilia e appartiene alla Città Metropolitana
-            di Palermo.
+            Partinico si trova nella Sicilia nord-occidentale,
+            nella Città Metropolitana di Palermo. Il territorio
+            comunale presenta una prevalenza di aree pianeggianti
+            e una fascia collinare nella parte meridionale.
           </p>
 
           <p>
-            Il territorio comunale ha una superficie indicata
-            nei dati della Città Metropolitana di Palermo in
-            <strong>108,06 km²</strong> e il centro urbano si
-            trova a circa <strong>175 metri sul livello del mare</strong>.
+            I dati statistici correnti riportano una superficie
+            comunale di <strong>108,06 km²</strong>. Il centro
+            comunale è indicato a circa <strong>175 metri sul
+            livello del mare</strong> nella documentazione
+            territoriale del Comune.
           </p>
 
           <p>
-            Il territorio presenta una prevalenza di aree
-            pianeggianti, con rilievi nella parte meridionale.
-            Tra gli elementi geografici indicati nella
+            Fra gli elementi del paesaggio descritti nella
             documentazione comunale figurano il monte Cesarò
-            e il monte Bisaccia.
+            e il monte Bisaccia, all'interno di un territorio
+            caratterizzato dal rapporto fra pianura, rilievi,
+            corsi d'acqua e aree agricole.
           </p>
 
         </div>
 
+
         <div class="facts">
 
           <div class="fact">
-            <strong>108,06 km²</strong>
+            <strong>
+              108,06 km²
+            </strong>
+
             <span>
-              superficie territoriale
+              superficie comunale
             </span>
+
+            <small>
+              dato statistico · 2026
+            </small>
           </div>
 
-          <div class="fact">
-            <strong>175 m</strong>
-            <span>
-              altitudine indicata per il centro
-            </span>
-          </div>
 
           <div class="fact">
-            <strong>~30.900</strong>
+            <strong>
+              175 m
+            </strong>
+
             <span>
-              residenti al 1° gennaio 2026
+              altitudine del centro comunale
             </span>
+
+            <small>
+              documentazione territoriale comunale
+            </small>
           </div>
 
+
           <div class="fact">
-            <strong>Palermo</strong>
+            <strong>
+              30.929
+            </strong>
+
+            <span>
+              residenti
+            </span>
+
+            <small>
+              1 gennaio 2026 · ISTAT
+            </small>
+          </div>
+
+
+          <div class="fact">
+            <strong>
+              Palermo
+            </strong>
+
             <span>
               città metropolitana
             </span>
+
+            <small>
+              Sicilia
+            </small>
           </div>
 
         </div>
@@ -1781,20 +2159,20 @@
         </p>
 
         <h3>
-          Un territorio tra pianura,
-          colline e Sicilia occidentale.
+          Una grande piana
+          tra Palermo e la Sicilia occidentale.
         </h3>
 
         <p>
-          La documentazione comunale descrive Partinico come
-          un territorio distinto fra una grande area pianeggiante
-          e una fascia collinare meridionale.
+          La configurazione fisica del territorio distingue
+          una vasta area pianeggiante da una fascia collinare
+          meridionale.
         </p>
 
         <p>
-          Scopri dati geografici, comuni confinanti,
-          caratteristiche fisiche e posizione nella
-          Città Metropolitana di Palermo.
+          La pagina dedicata raccoglie posizione geografica,
+          comuni confinanti, caratteristiche del paesaggio
+          e dati territoriali.
         </p>
 
         <a
@@ -1811,7 +2189,9 @@
   </section>
 
 
-  <!-- PLACES -->
+  <!-- =========================================================
+       PLACES
+       ========================================================= -->
 
   <section
     class="section section-soft"
@@ -1825,20 +2205,20 @@
         <div>
 
           <p class="eyebrow">
-            Luoghi di Partinico
+            Cosa vedere a Partinico
           </p>
 
           <h2 id="places-title">
-            Alcuni dei luoghi da conoscere.
+            Luoghi, monumenti
+            e architetture storiche.
           </h2>
 
         </div>
 
         <p>
-          Il patrimonio locale comprende edifici storici,
-          complessi religiosi, ville, torri, monumenti
-          e strutture legate alla storia economica e
-          culturale del territorio.
+          Il patrimonio locale comprende edifici religiosi,
+          palazzi, torri, ville e strutture legate alla
+          storia agricola ed economica del territorio.
         </p>
 
       </div>
@@ -1857,6 +2237,7 @@
             width="800"
             height="500"
             loading="lazy"
+            decoding="async"
           >
 
           <div class="place-content">
@@ -1870,9 +2251,9 @@
             </h3>
 
             <p>
-              Complesso storico legato al Real Podere di Partinico
-              e alla produzione e commercializzazione dei prodotti
-              agricoli.
+              Complesso storico legato al Real Podere di
+              Partinico e alla produzione e commercializzazione
+              dei prodotti agricoli.
             </p>
 
           </div>
@@ -1891,6 +2272,7 @@
             width="800"
             height="500"
             loading="lazy"
+            decoding="async"
           >
 
           <div class="place-content">
@@ -1904,8 +2286,8 @@
             </h3>
 
             <p>
-              Antico complesso conventuale oggi sede della
-              Biblioteca Comunale e di alcuni uffici comunali.
+              Antico complesso conventuale legato alla storia
+              culturale e istituzionale della città.
             </p>
 
           </div>
@@ -1924,6 +2306,7 @@
             width="800"
             height="500"
             loading="lazy"
+            decoding="async"
           >
 
           <div class="place-content">
@@ -1937,8 +2320,8 @@
             </h3>
 
             <p>
-              Una delle torri storiche meglio conservate
-              documentate dal Comune di Partinico.
+              Una delle architetture fortificate documentate
+              fra le torri storiche del territorio partinicese.
             </p>
 
           </div>
@@ -1952,7 +2335,9 @@
   </section>
 
 
-  <!-- HISTORY -->
+  <!-- =========================================================
+       HISTORY
+       ========================================================= -->
 
   <section
     class="section section-warm"
@@ -1975,32 +2360,26 @@
         <div class="copy">
 
           <p>
-            La storia documentata del territorio partinicese
-            parte da una frequentazione umana molto antica.
-            La piana conserva testimonianze che il Comune
-            collega alla preistoria e alla protostoria.
+            La storia del territorio partinicese documentata
+            dal Comune parte da frequentazioni umane molto
+            antiche, testimoniate anche da strumenti litici
+            rinvenuti nella piana e conservati nel Museo Civico.
           </p>
 
           <p>
-            Le fonti comunali descrivono inoltre la stratificazione
-            sicana, romana, araba e normanna del territorio,
-            fino alla progressiva formazione dell'attuale
-            centro abitato.
+            La stratificazione storica comprende le popolazioni
+            sicane e le successive dominazioni che hanno contribuito
+            alla formazione dell'identità storica del territorio.
           </p>
 
-          <a
-            class="button"
-            href="/storia/"
-            style="
-              color:#fff;
-              background:#0b2538;
-              margin-top:10px;
-            "
-          >
-            Leggi la storia completa
-          </a>
-
         </div>
+
+        <a
+          class="button button-primary"
+          href="/storia/"
+        >
+          Scopri la storia di Partinico
+        </a>
 
       </div>
 
@@ -2014,14 +2393,13 @@
           </strong>
 
           <h3>
-            Le prime presenze umane
+            Le prime frequentazioni del territorio
           </h3>
 
           <p>
-            Nella piana di Partinico sono stati rinvenuti
-            strumenti litici conservati nel Museo Civico,
-            testimonianza della frequentazione preistorica
-            del territorio.
+            Il territorio di Partinico conserva testimonianze
+            di frequentazioni umane antiche, documentate anche
+            attraverso reperti archeologici e strumenti litici.
           </p>
 
         </article>
@@ -2034,13 +2412,14 @@
           </strong>
 
           <h3>
-            Inico e gli insediamenti sicani
+            Le popolazioni della Sicilia antica
           </h3>
 
           <p>
-            La documentazione comunale collega la piana
-            a un sistema di insediamenti sicani, fra cui
-            Inico e altri centri dell'area occidentale.
+            La piana partinicese si inserisce nella complessa
+            storia degli insediamenti della Sicilia occidentale,
+            con testimonianze riferibili alle popolazioni
+            che precedettero le successive dominazioni.
           </p>
 
         </article>
@@ -2053,14 +2432,13 @@
           </strong>
 
           <h3>
-            Parthenicum
+            Il territorio nella Sicilia romana
           </h3>
 
           <p>
-            Le fonti riportano il toponimo Parthenicum
-            nell'Itinerarium Antonini Augusti e collocano
-            il territorio lungo l'antico percorso fra
-            Panormo e le Acque Segestane.
+            La presenza romana rappresenta una fase importante
+            nella lunga trasformazione del territorio,
+            inserito nelle reti agricole e viarie della Sicilia.
           </p>
 
         </article>
@@ -2069,18 +2447,17 @@
         <article class="timeline-item">
 
           <strong>
-            Medioevo
+            Periodo arabo-normanno
           </strong>
 
           <h3>
-            Arabi, Normanni e la Terra di Partinico
+            La trasformazione del paesaggio e degli insediamenti
           </h3>
 
           <p>
-            Le fonti medievali descrivono Partinico come
-            terra e distretto dotato di fortificazioni,
-            boschi, vie di comunicazione e strutture
-            produttive.
+            Il periodo arabo e la successiva fase normanna
+            contribuiscono alla trasformazione dell'organizzazione
+            territoriale e agricola della Sicilia occidentale.
           </p>
 
         </article>
@@ -2089,18 +2466,37 @@
         <article class="timeline-item">
 
           <strong>
-            1307–1309
+            Età moderna
           </strong>
 
           <h3>
-            La nascita dell'attuale centro
+            La formazione del centro abitato
           </h3>
 
           <p>
-            La documentazione storica del Comune collega
-            alle concessioni di Federico II d'Aragona
-            del 1307 e del 1309 l'origine dell'insediamento
-            nella località chiamata Sala.
+            La storia di Partinico si sviluppa progressivamente
+            attorno a un centro urbano destinato a diventare
+            un importante riferimento della piana occidentale.
+          </p>
+
+        </article>
+
+
+        <article class="timeline-item">
+
+          <strong>
+            Età contemporanea
+          </strong>
+
+          <h3>
+            Una città nel territorio metropolitano di Palermo
+          </h3>
+
+          <p>
+            Partinico è oggi un comune di oltre trentamila
+            residenti, con una propria identità culturale,
+            economica e sociale all'interno della Sicilia
+            occidentale.
           </p>
 
         </article>
@@ -2112,10 +2508,167 @@
   </section>
 
 
-  <!-- CULTURE / COMMUNITY -->
+  <!-- =========================================================
+       SEARCH INTENT / USER JOURNEYS
+       ========================================================= -->
 
   <section
     class="section"
+    aria-labelledby="intent-title"
+  >
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div>
+
+          <p class="eyebrow">
+            Cerca quello che ti interessa
+          </p>
+
+          <h2 id="intent-title">
+            Da dove vuoi partire?
+          </h2>
+
+        </div>
+
+        <p>
+          La guida è organizzata anche in base alle domande
+          e alle esigenze più comuni di chi cerca informazioni
+          su Partinico.
+        </p>
+
+      </div>
+
+
+      <div class="intent-grid">
+
+        <article class="intent-card">
+
+          <h3>
+            Voglio conoscere Partinico
+          </h3>
+
+          <p>
+            Posizione, territorio, popolazione, storia,
+            caratteristiche della città e principali
+            informazioni sul comune.
+          </p>
+
+          <a href="/territorio/">
+            Parti dal territorio →
+          </a>
+
+        </article>
+
+
+        <article class="intent-card">
+
+          <h3>
+            Voglio sapere cosa vedere
+          </h3>
+
+          <p>
+            Monumenti, chiese, palazzi, torri, architetture
+            storiche e luoghi che raccontano l'identità
+            di Partinico.
+          </p>
+
+          <a href="/luoghi/">
+            Scopri i luoghi →
+          </a>
+
+        </article>
+
+
+        <article class="intent-card">
+
+          <h3>
+            Voglio sapere cosa succede in città
+          </h3>
+
+          <p>
+            Eventi, manifestazioni, iniziative culturali,
+            attività locali e realtà che animano la comunità.
+          </p>
+
+          <a href="/eventi/">
+            Vai agli eventi →
+          </a>
+
+        </article>
+
+
+        <article class="intent-card">
+
+          <h3>
+            Voglio conoscere la storia
+          </h3>
+
+          <p>
+            Dalle testimonianze più antiche alla formazione
+            della città contemporanea, con una lettura
+            cronologica del territorio.
+          </p>
+
+          <a href="/storia/">
+            Leggi la storia →
+          </a>
+
+        </article>
+
+
+        <article class="intent-card">
+
+          <h3>
+            Cerco attività e servizi
+          </h3>
+
+          <p>
+            Un punto di accesso alle attività economiche,
+            ai professionisti, alle imprese e ai servizi
+            presenti nel territorio comunale.
+          </p>
+
+          <a href="/attivita/">
+            Esplora le attività →
+          </a>
+
+        </article>
+
+
+        <article class="intent-card">
+
+          <h3>
+            Cerco dati e informazioni
+          </h3>
+
+          <p>
+            Popolazione, superficie, densità, altitudine
+            e altri dati utili per comprendere Partinico
+            attraverso numeri e fonti.
+          </p>
+
+          <a href="/dati/">
+            Consulta i dati →
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       CULTURE / COMMUNITY
+       ========================================================= -->
+
+  <section
+    class="section section-soft"
     aria-labelledby="community-title"
   >
 
@@ -2126,19 +2679,21 @@
         <div>
 
           <p class="eyebrow">
-            Vita della città
+            Identità locale
           </p>
 
           <h2 id="community-title">
-            Partinico non è soltanto patrimonio storico.
+            Non solo luoghi:
+            una città è una comunità.
           </h2>
 
         </div>
 
         <p>
-          Il progetto vuole diventare progressivamente una
-          risorsa anche per conoscere attività, servizi,
-          associazioni, eventi e iniziative contemporanee.
+          Il progetto non si limita alla descrizione geografica
+          della città: raccoglie progressivamente anche gli
+          elementi culturali, sociali ed economici che compongono
+          la vita di Partinico.
         </p>
 
       </div>
@@ -2149,21 +2704,20 @@
         <article class="community-card dark">
 
           <h3>
-            Attività
+            Cultura
           </h3>
 
           <p>
-            Una futura directory territoriale organizzata
-            per categorie, con schede individuali e dati
-            verificabili.
+            Patrimonio culturale, istituzioni, biblioteca,
+            iniziative, memoria locale e realtà che contribuiscono
+            alla costruzione dell'identità culturale partinicese.
           </p>
 
           <a
-            class="button button-primary"
-            href="/attivita/"
-            style="margin-top:25px"
+            class="button button-secondary"
+            href="/cultura/"
           >
-            Esplora le attività
+            Esplora la cultura
           </a>
 
         </article>
@@ -2172,24 +2726,24 @@
         <article class="community-card light">
 
           <h3>
-            Eventi
+            Comunità
           </h3>
 
           <p>
-            Un calendario dedicato agli appuntamenti pubblici,
-            culturali, sportivi e alle iniziative del territorio.
+            Associazioni, gruppi, iniziative sociali e persone
+            che partecipano alla vita collettiva della città.
           </p>
 
           <a
-            class="button"
-            href="/eventi/"
+            class="button button-secondary"
+            href="/comunita/"
             style="
-              margin-top:25px;
-              color:#fff;
-              background:#0b2538;
+              color: var(--navy);
+              border-color: var(--navy);
+              background: transparent;
             "
           >
-            Vedi gli eventi
+            Scopri la comunità
           </a>
 
         </article>
@@ -2198,25 +2752,25 @@
         <article class="community-card gold">
 
           <h3>
-            Comunità
+            Economia locale
           </h3>
 
           <p>
-            Associazioni, iniziative sociali, cultura,
-            persone e realtà che contribuiscono alla vita
-            quotidiana della città.
+            Attività produttive, imprese, professionisti,
+            servizi e realtà economiche che fanno parte
+            del tessuto locale.
           </p>
 
           <a
-            class="button"
-            href="/comunita/"
+            class="button button-secondary"
+            href="/attivita/"
             style="
-              margin-top:25px;
-              color:#fff;
-              background:#0b2538;
+              color: var(--navy);
+              border-color: var(--navy);
+              background: transparent;
             "
           >
-            Conosci la comunità
+            Esplora le attività
           </a>
 
         </article>
@@ -2228,11 +2782,13 @@
   </section>
 
 
-  <!-- SOURCES -->
+  <!-- =========================================================
+       DATA / AUTHORITY
+       ========================================================= -->
 
   <section
-    class="section section-soft"
-    aria-labelledby="sources-title"
+    class="section"
+    aria-labelledby="data-title"
   >
 
     <div class="container">
@@ -2242,21 +2798,20 @@
         <div>
 
           <p class="eyebrow">
-            Metodo e fonti
+            Informazioni e fonti
           </p>
 
-          <h2 id="sources-title">
-            Informazioni documentate,
-            non contenuti inventati.
+          <h2 id="data-title">
+            Una guida costruita
+            sui dati.
           </h2>
 
         </div>
 
         <p>
-          Le informazioni storiche e territoriali vengono
-          confrontate con fonti pubbliche e istituzionali.
-          I dati soggetti a variazione devono riportare
-          sempre periodo e fonte.
+          Le informazioni vengono organizzate distinguendo
+          dati statistici, documentazione istituzionale,
+          patrimonio culturale e contenuti editoriali.
         </p>
 
       </div>
@@ -2267,23 +2822,25 @@
         <article class="source-box">
 
           <h3>
-            Comune di Partinico
+            Dati statistici
           </h3>
 
           <p>
-            Fonte primaria per storia locale, patrimonio,
-            luoghi, biblioteca, cultura, servizi e
-            informazioni istituzionali.
+            I dati demografici e statistici riportati nella guida
+            vengono riferiti, quando disponibile, alla fonte
+            istituzionale e alla relativa data di aggiornamento.
           </p>
 
           <p>
+            Per la popolazione e gli indicatori statistici
+            il riferimento principale è
             <a
-              href="https://www.comune.partinico.pa.it/"
-              target="_blank"
+              href="https://www.istat.it/"
               rel="noopener noreferrer"
+              target="_blank"
             >
-              Visita il sito del Comune di Partinico
-            </a>
+              ISTAT
+            </a>.
           </p>
 
         </article>
@@ -2292,22 +2849,85 @@
         <article class="source-box">
 
           <h3>
-            Dati territoriali e demografici
+            Documentazione istituzionale
           </h3>
 
           <p>
-            Per i dati statistici vengono privilegiati
-            ISTAT e pubblicazioni della Città Metropolitana
-            di Palermo, indicando sempre l'anno di riferimento.
+            Le informazioni territoriali e amministrative
+            vengono confrontate con la documentazione pubblicata
+            dagli enti competenti.
           </p>
 
           <p>
-            <a href="/fonti/">
-              Consulta metodologia e fonti
-            </a>
+            Un riferimento istituzionale per il territorio
+            è il
+            <a
+              href="https://www.comune.partinico.pa.it/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Comune di Partinico
+            </a>.
           </p>
 
         </article>
+
+
+        <article class="source-box">
+
+          <h3>
+            Patrimonio e storia
+          </h3>
+
+          <p>
+            Le informazioni relative a monumenti, architetture,
+            patrimonio culturale e storia locale devono essere
+            ricondotte, ove possibile, a documentazione verificabile,
+            fonti bibliografiche e istituzioni culturali.
+          </p>
+
+        </article>
+
+
+        <article class="source-box">
+
+          <h3>
+            Aggiornamento editoriale
+          </h3>
+
+          <p>
+            Le pagine possono essere aggiornate nel tempo per
+            correggere, ampliare o contestualizzare le informazioni.
+            Le date di aggiornamento aiutano a distinguere
+            informazioni correnti e contenuti storici.
+          </p>
+
+        </article>
+
+      </div>
+
+
+      <div
+        style="
+          margin-top: 25px;
+          padding: 22px 25px;
+          background: var(--warm);
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          color: var(--muted);
+          font-size: 14px;
+        "
+      >
+
+        <strong style="color: var(--navy);">
+          Nota editoriale:
+        </strong>
+
+        questa guida è un progetto digitale indipendente.
+        Le informazioni vengono organizzate con finalità
+        informative e di valorizzazione del territorio.
+        Per dati amministrativi, normativi o ufficiali fa fede
+        la documentazione dell'ente competente.
 
       </div>
 
@@ -2316,40 +2936,211 @@
   </section>
 
 
-  <!-- CTA -->
+  <!-- =========================================================
+       FAQ
+       ========================================================= -->
 
-  <section class="final-cta">
+  <section
+    class="section section-warm"
+    aria-labelledby="faq-title"
+  >
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div>
+
+          <p class="eyebrow">
+            Domande frequenti
+          </p>
+
+          <h2 id="faq-title">
+            Domande su Partinico.
+          </h2>
+
+        </div>
+
+        <p>
+          Una sintesi delle informazioni fondamentali per chi
+          cerca rapidamente una risposta sulla città.
+        </p>
+
+      </div>
+
+
+      <div class="faq">
+
+        <details>
+
+          <summary>
+            Dove si trova Partinico?
+          </summary>
+
+          <p>
+            Partinico si trova nella Sicilia nord-occidentale
+            ed è un comune della Città Metropolitana di Palermo.
+            Il suo territorio comprende la piana partinicese
+            e una fascia collinare nella parte meridionale.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Quanti abitanti ha Partinico?
+          </summary>
+
+          <p>
+            Secondo il dato indicato in questa guida,
+            riferito al 1 gennaio 2026, Partinico conta
+            30.929 residenti. Il dato deve essere letto
+            insieme alla relativa fonte statistica e alla
+            data di riferimento.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Qual è la superficie di Partinico?
+          </summary>
+
+          <p>
+            La superficie comunale indicata è di
+            108,06 km². Per i dati territoriali aggiornati
+            è opportuno fare riferimento alla documentazione
+            statistica e istituzionale utilizzata nella
+            pagina dedicata al territorio.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Cosa vedere a Partinico?
+          </summary>
+
+          <p>
+            Tra i luoghi e le architetture da approfondire
+            nella guida sono presenti la Real Cantina Borbonica,
+            il Palazzo del Carmine, Torre A Braciara e altri
+            edifici, monumenti e luoghi del territorio.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Qual è la storia di Partinico?
+          </summary>
+
+          <p>
+            La storia del territorio partinicese attraversa
+            diverse epoche, dalle frequentazioni preistoriche
+            alle fasi protostoriche e romane, dal periodo
+            arabo-normanno alla formazione del centro abitato
+            e alla città contemporanea.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Dove trovare gli eventi di Partinico?
+          </summary>
+
+          <p>
+            Gli appuntamenti e le iniziative locali vengono
+            raccolti nella sezione dedicata agli
+            <a href="/eventi/">
+              eventi di Partinico
+            </a>,
+            che può essere aggiornata nel tempo.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Dove trovare dati e informazioni statistiche?
+          </summary>
+
+          <p>
+            La sezione
+            <a href="/dati/">
+              Partinico in numeri
+            </a>
+            raccoglie i principali dati demografici e territoriali,
+            indicando quando possibile la fonte e la data
+            di riferimento.
+          </p>
+
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       FINAL CTA
+       ========================================================= -->
+
+  <section
+    class="final-cta"
+    aria-labelledby="cta-title"
+  >
 
     <div class="container">
 
       <p class="eyebrow">
-        Partinico Digital Community
+        Esplora Partinico
       </p>
 
-      <h2>
-        Conoscere Partinico significa
-        conoscere il territorio che la circonda
-        e le persone che la fanno vivere.
+      <h2 id="cta-title">
+        Parti dalla città.
+        Poi scopri tutto ciò che c'è intorno.
       </h2>
 
       <p>
-        Una guida locale costruita progressivamente,
-        pagina dopo pagina, informazione dopo informazione.
+        Territorio, storia, luoghi, cultura, attività,
+        eventi, comunità e dati: una guida organizzata
+        per costruire una conoscenza completa di Partinico.
       </p>
 
       <a
         class="button button-primary"
-        href="/fonti/"
+        href="/territorio/"
       >
-        Come vengono verificate le informazioni
+        Inizia dal territorio
       </a>
 
     </div>
 
   </section>
 
+
 </main>
 
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 
 <footer>
 
@@ -2357,15 +3148,42 @@
 
     <div class="footer-grid">
 
+
       <div>
 
-        <h3>
-          PARTINICO
-        </h3>
+        <a
+          class="brand"
+          href="/"
+          aria-label="Partinico — torna alla homepage"
+        >
+
+          <span
+            class="brand-mark"
+            aria-hidden="true"
+          >
+            P
+          </span>
+
+          <span class="brand-text">
+
+            PARTINICO
+
+            <small
+              style="
+                color: #9eb4c1;
+              "
+            >
+              guida digitale al territorio
+            </small>
+
+          </span>
+
+        </a>
+
 
         <p>
-          Guida digitale indipendente dedicata a Partinico,
-          alla sua storia, al territorio, ai luoghi,
+          Un progetto digitale indipendente dedicato a
+          Partinico, alla sua storia, al territorio, ai luoghi,
           alla cultura e alla comunità.
         </p>
 
@@ -2404,12 +3222,6 @@
             </a>
           </li>
 
-          <li>
-            <a href="/dati/">
-              Dati
-            </a>
-          </li>
-
         </ul>
 
       </div>
@@ -2442,14 +3254,8 @@
           </li>
 
           <li>
-            <a href="/fonti/">
-              Fonti
-              </a>
-          </li>
-
-          <li>
-            <a href="/contatti/">
-              Contatti
+            <a href="/dati/">
+              Dati
             </a>
           </li>
 
@@ -2463,12 +3269,11 @@
     <div class="footer-bottom">
 
       <span>
-        © <span id="year">2026</span>
-        Partinico Digital Community
+        © 2026 Partinico Digital Community
       </span>
 
       <span>
-        Progetto digitale indipendente dedicato a Partinico.
+        Guida digitale indipendente su Partinico, Sicilia
       </span>
 
     </div>
@@ -2478,18 +3283,96 @@
 </footer>
 
 
-<script>
-  /*
-   * Aggiorna automaticamente l'anno del copyright.
-   * Non modifica il contenuto indicizzato della pagina.
-   */
-  (() => {
-    const year = document.getElementById("year");
+<!-- =========================================================
+     FAQ STRUCTURED DATA
+     ========================================================= -->
 
-    if (year) {
-      year.textContent = new Date().getFullYear();
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://partinico.github.io/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Dove si trova Partinico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partinico si trova nella Sicilia nord-occidentale ed è un comune della Città Metropolitana di Palermo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanti abitanti ha Partinico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Secondo il dato indicato nella guida e riferito al 1 gennaio 2026, Partinico conta 30.929 residenti."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual è la superficie di Partinico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La superficie comunale indicata è di 108,06 km²."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cosa vedere a Partinico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tra i luoghi da approfondire sono presenti la Real Cantina Borbonica, il Palazzo del Carmine, Torre A Braciara e altri luoghi storici e culturali del territorio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual è la storia di Partinico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La storia del territorio partinicese attraversa diverse epoche, dalle frequentazioni preistoriche alle fasi protostoriche e romane, dal periodo arabo-normanno alla formazione del centro abitato e alla città contemporanea."
+      }
     }
-  })();
+  ]
+}
+</script>
+
+
+<!-- =========================================================
+     SMALL UX ENHANCEMENT
+     ========================================================= -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const header = document.querySelector(".site-header");
+
+    if (!header) {
+      return;
+    }
+
+    const updateHeader = () => {
+
+      if (window.scrollY > 12) {
+        header.style.boxShadow =
+          "0 8px 30px rgba(11,37,56,.08)";
+      } else {
+        header.style.boxShadow = "none";
+      }
+
+    };
+
+    updateHeader();
+
+    window.addEventListener(
+      "scroll",
+      updateHeader,
+      {
+        passive: true
+      }
+    );
+
+  });
 </script>
 
 </body>
