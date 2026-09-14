@@ -8,124 +8,127 @@
     content="width=device-width, initial-scale=1, viewport-fit=cover"
   >
 
-  <title>Partinico — Digital Community</title>
+  <title>Partinico Digital Community | Persone, territorio e iniziative</title>
 
   <meta
     name="description"
-    content="Partinico — Digital Community. Un progetto digitale dedicato a Partinico, Sicilia, Italia."
+    content="Partinico Digital Community è uno spazio digitale per scoprire persone, attività, iniziative, eventi e opportunità del territorio di Partinico."
   >
 
-  <meta name="author" content="Partinico">
+  <meta name="author" content="Partinico Digital Community">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#102a43">
 
-  <meta
-    name="robots"
-    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-  >
-
-  <link
-    rel="canonical"
-    href="https://partinico.github.io/"
-  >
-
-  <meta name="theme-color" content="#050505">
-  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://partinico.github.io/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Partinico">
   <meta property="og:locale" content="it_IT">
-
-  <meta
-    property="og:title"
-    content="Partinico — Digital Community"
-  >
-
+  <meta property="og:site_name" content="Partinico Digital Community">
+  <meta property="og:title" content="Partinico Digital Community">
   <meta
     property="og:description"
-    content="Un progetto digitale dedicato a Partinico, Sicilia, Italia."
+    content="Uno spazio digitale per scoprire e valorizzare persone, attività, iniziative ed eventi di Partinico."
   >
+  <meta property="og:url" content="https://partinico.github.io/">
 
+  <!-- TODO: sostituire con un'immagine reale almeno 1200 × 630 px -->
   <meta
-    property="og:url"
-    content="https://partinico.github.io/"
+    property="og:image"
+    content="https://partinico.github.io/assets/images/partinico-community-og.jpg"
   >
+  <meta property="og:image:alt" content="Partinico Digital Community">
 
-  <!-- X / Twitter -->
-  <meta name="twitter:card" content="summary">
-
-  <meta
-    name="twitter:title"
-    content="Partinico — Digital Community"
-  >
-
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Partinico Digital Community">
   <meta
     name="twitter:description"
-    content="Un progetto digitale dedicato a Partinico, Sicilia, Italia."
+    content="Scopri persone, attività, iniziative ed eventi del territorio di Partinico."
+  >
+  <meta
+    name="twitter:image"
+    content="https://partinico.github.io/assets/images/partinico-community-og.jpg"
   >
 
-  <!-- Structured data -->
+  <!-- Icona: aggiungere il file se disponibile -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Dati strutturati: rappresentano il progetto, non un'attività commerciale -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://partinico.github.io/#website",
-    "name": "Partinico — Digital Community",
-    "url": "https://partinico.github.io/",
-    "description": "Un progetto digitale dedicato a Partinico, Sicilia, Italia.",
-    "inLanguage": "it-IT",
-    "about": {
-      "@type": "Place",
-      "@id": "https://partinico.github.io/#partinico",
-      "name": "Partinico",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Partinico",
-        "addressRegion": "Sicilia",
-        "addressCountry": "IT"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://partinico.github.io/#website",
+        "url": "https://partinico.github.io/",
+        "name": "Partinico Digital Community",
+        "description": "Uno spazio digitale per scoprire e valorizzare persone, attività, iniziative ed eventi di Partinico.",
+        "inLanguage": "it-IT",
+        "publisher": {
+          "@id": "https://partinico.github.io/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://partinico.github.io/#organization",
+        "name": "Partinico Digital Community",
+        "url": "https://partinico.github.io/",
+        "areaServed": {
+          "@type": "City",
+          "name": "Partinico",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Sicilia"
+          }
+        },
+        "sameAs": [
+          "TODO_SOCIAL_URL_1",
+          "TODO_SOCIAL_URL_2"
+        ]
       }
-    }
+    ]
   }
   </script>
 
   <style>
     :root {
-      --black: #050505;
-      --white: #f5f5f1;
-      --secondary: #aaa9a3;
-      --tertiary: #6e6e68;
-      --line: #292927;
-      --line-soft: #1b1b1a;
+      --color-ink: #102a43;
+      --color-ink-soft: #243b53;
+      --color-muted: #52606d;
+      --color-surface: #ffffff;
+      --color-surface-soft: #f4f7fa;
+      --color-border: #d9e2ec;
+      --color-accent: #d97706;
+      --color-accent-dark: #a84f00;
+      --color-focus: #2563eb;
+      --color-white: #ffffff;
 
-      --sans:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Helvetica,
-        Arial,
-        sans-serif;
+      --radius-sm: 0.5rem;
+      --radius-md: 0.9rem;
+      --radius-lg: 1.4rem;
 
-      --mono:
-        "SFMono-Regular",
-        "Cascadia Mono",
-        "Roboto Mono",
-        Consolas,
-        "Liberation Mono",
-        monospace;
+      --shadow-sm: 0 0.25rem 1rem rgb(16 42 67 / 0.08);
+      --shadow-md: 0 0.75rem 2rem rgb(16 42 67 / 0.12);
 
-      --display:
-        clamp(3.45rem, calc(6.6vw + 1rem), 10.8rem);
-
-      --body:
-        clamp(1rem, calc(.18vw + .98rem), 1.16rem);
-
-      --gutter:
-        clamp(1.1rem, 3vw, 3.75rem);
-
-      --top:
-        clamp(1.15rem, 2.2vw, 2.75rem);
-
-      --ease:
-        cubic-bezier(.16, 1, .3, 1);
+      --container: 72rem;
+      --space-1: 0.5rem;
+      --space-2: 0.75rem;
+      --space-3: 1rem;
+      --space-4: 1.5rem;
+      --space-5: 2rem;
+      --space-6: 3rem;
+      --space-7: 4.5rem;
+      --space-8: 7rem;
     }
 
     *,
@@ -135,1071 +138,900 @@
     }
 
     html {
-      min-width: 280px;
-      min-height: 100%;
-      background: var(--black);
-      color-scheme: dark;
-      text-size-adjust: 100%;
-      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
     }
 
     body {
-      min-width: 280px;
-      min-height: 100svh;
+      min-width: 20rem;
       margin: 0;
-
-      background: var(--black);
-      color: var(--white);
-
-      font-family: var(--sans);
-      font-synthesis: none;
-
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      color: var(--color-ink);
+      background: var(--color-surface);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
       text-rendering: optimizeLegibility;
-
-      overflow-x: clip;
     }
 
-    ::selection {
-      color: var(--black);
-      background: var(--white);
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
     }
 
     a {
       color: inherit;
-      text-decoration: none;
     }
 
-    a:focus-visible {
-      outline: 1px solid var(--white);
-      outline-offset: 7px;
+    a:focus-visible,
+    button:focus-visible {
+      outline: 0.2rem solid var(--color-focus);
+      outline-offset: 0.2rem;
+      border-radius: var(--radius-sm);
     }
 
-    .page {
-      min-height: 100svh;
+    .skip-link {
+      position: fixed;
+      z-index: 1000;
+      top: 0.75rem;
+      left: 0.75rem;
+      padding: 0.7rem 1rem;
+      color: var(--color-white);
+      background: var(--color-ink);
+      border-radius: var(--radius-sm);
+      transform: translateY(-160%);
+      transition: transform 160ms ease;
+    }
 
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--container));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 100;
+      top: 0;
+      background: rgb(255 255 255 / 0.94);
+      border-bottom: 1px solid var(--color-border);
+      backdrop-filter: blur(0.75rem);
+    }
+
+    .header-inner {
       display: flex;
-      flex-direction: column;
-
-      padding:
-        max(var(--top), env(safe-area-inset-top))
-        max(var(--gutter), env(safe-area-inset-right))
-        max(var(--top), env(safe-area-inset-bottom))
-        max(var(--gutter), env(safe-area-inset-left));
-    }
-
-    /* =========================
-       HEADER
-       ========================= */
-
-    .header {
-      position: relative;
-      z-index: 2;
-
-      display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
-
-      animation:
-        header-in .8s var(--ease) both;
+      min-height: 4.5rem;
+      gap: var(--space-4);
     }
 
     .brand {
       display: inline-flex;
-      align-items: baseline;
-
-      color: var(--white);
-
-      font-size: .8rem;
-      font-weight: 540;
-
-      line-height: 1;
-
-      letter-spacing: -.045em;
-      text-transform: uppercase;
-
-      transition: opacity .3s ease;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--color-ink);
+      font-weight: 800;
+      line-height: 1.15;
+      text-decoration: none;
     }
 
-    .brand:hover {
-      opacity: .55;
+    .brand-mark {
+      display: grid;
+      width: 2.4rem;
+      height: 2.4rem;
+      place-items: center;
+      color: var(--color-white);
+      background: var(--color-ink);
+      border-radius: 0.7rem;
+      font-size: 0.8rem;
+      letter-spacing: -0.04em;
     }
 
-    .brand:focus-visible {
-      outline: 1px solid var(--white);
-      outline-offset: 7px;
+    .brand-text {
+      max-width: 12rem;
+      font-size: 0.95rem;
     }
 
-    .brand-sub {
-      margin-left: .38rem;
-      color: var(--secondary);
-      font-weight: 400;
-    }
-
-    .status {
+    .main-nav ul {
       display: flex;
       align-items: center;
-      gap: .6rem;
-
-      color: var(--secondary);
-
-      font-family: var(--mono);
-      font-size: .65rem;
-      font-weight: 450;
-
-      line-height: 1.4;
-      letter-spacing: .045em;
-      text-transform: uppercase;
+      gap: clamp(0.75rem, 2vw, 1.5rem);
+      margin: 0;
+      padding: 0;
+      list-style: none;
     }
 
-    .status-dot {
-      width: 5px;
-      height: 5px;
-
-      flex: 0 0 5px;
-
-      border-radius: 50%;
-      background: var(--white);
-
-      animation:
-        pulse 3.4s ease-in-out infinite;
+    .main-nav a {
+      color: var(--color-ink-soft);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
     }
 
-    /* =========================
-       MAIN
-       ========================= */
-
-    main {
-      flex: 1;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      padding:
-        clamp(5rem, 11vh, 9rem)
-        0
-        clamp(4rem, 8vh, 7rem);
+    .main-nav a:hover {
+      color: var(--color-accent-dark);
     }
 
-    .meta {
-      display: flex;
-      align-items: center;
-      gap: .9rem;
-
-      width: fit-content;
-
-      margin-bottom:
-        clamp(2rem, 3vw, 3.35rem);
-
-      color: var(--secondary);
-
-      font-family: var(--mono);
-      font-size: .69rem;
-      font-weight: 450;
-
-      line-height: 1.4;
-      letter-spacing: .025em;
-      text-transform: uppercase;
-
-      animation:
-        fade-up .9s .05s var(--ease) both;
+    .nav-cta {
+      padding: 0.65rem 0.9rem;
+      color: var(--color-white) !important;
+      background: var(--color-ink);
+      border-radius: var(--radius-sm);
     }
 
-    .meta-rule {
-      width: 2.15rem;
-      height: 1px;
-
-      flex: 0 0 2.15rem;
-
-      background: var(--line);
+    .nav-cta:hover {
+      background: var(--color-ink-soft);
     }
 
     .hero {
       position: relative;
-      width: 100%;
-
-      padding-bottom:
-        clamp(.65rem, .9vw, 1.1rem);
+      isolation: isolate;
+      overflow: hidden;
+      padding: clamp(4.5rem, 10vw, 8rem) 0;
+      background:
+        radial-gradient(circle at 88% 12%, rgb(217 119 6 / 0.18), transparent 24rem),
+        linear-gradient(135deg, #f6f8fb 0%, #ffffff 64%);
     }
 
-    .hero h1 {
-      width: min(100%, 1800px);
+    .hero::after {
+      position: absolute;
+      z-index: -1;
+      right: -10rem;
+      bottom: -14rem;
+      width: 32rem;
+      height: 32rem;
+      border: 1px solid rgb(16 42 67 / 0.08);
+      border-radius: 50%;
+      content: "";
+    }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+      align-items: center;
+      gap: clamp(2rem, 7vw, 6rem);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0 0 var(--space-3);
+      color: var(--color-accent-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 2rem;
+      height: 0.15rem;
+      background: var(--color-accent);
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3 {
       margin: 0;
-
-      color: var(--white);
-
-      font-family: var(--sans);
-      font-size: var(--display);
-      font-weight: 430;
-
-      line-height: .96;
-      letter-spacing: -.075em;
-
-      font-kerning: normal;
+      color: var(--color-ink);
+      line-height: 1.15;
       text-wrap: balance;
     }
 
-    .hero-line {
-      display: block;
-      position: relative;
-
-      padding:
-        0 .07em .09em;
-
-      margin-bottom: -.09em;
-
-      overflow: visible;
+    h1,
+    h2 {
+      font-family: "Source Serif 4", Georgia, serif;
     }
 
-    .hero-line > span {
-      display: block;
-
-      transform:
-        translate3d(0, 104%, 0);
-
-      will-change: transform;
-
-      animation:
-        hero-reveal 1.08s var(--ease) forwards;
+    h1 {
+      max-width: 12ch;
+      font-size: clamp(2.8rem, 7vw, 5.7rem);
+      letter-spacing: -0.055em;
     }
 
-    .hero-line:nth-child(1) > span {
-      animation-delay: .08s;
+    h2 {
+      max-width: 18ch;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      letter-spacing: -0.04em;
     }
 
-    .hero-line:nth-child(2) > span {
-      animation-delay: .17s;
+    h3 {
+      font-size: 1.18rem;
     }
 
-    .hero-line:nth-child(3) > span {
-      animation-delay: .26s;
+    .lead {
+      max-width: 42rem;
+      margin: var(--space-4) 0 0;
+      color: var(--color-muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
     }
 
-    .index {
-      position: absolute;
-
-      top: 50%;
-      right: 0;
-
+    .button-group {
       display: flex;
-      align-items: center;
-      gap: .65rem;
-
-      color: var(--tertiary);
-
-      font-family: var(--mono);
-      font-size: .62rem;
-      font-weight: 450;
-
-      line-height: 1;
-      letter-spacing: .055em;
-
-      transform:
-        translateY(-50%)
-        rotate(90deg);
-
-      transform-origin: right center;
-
-      opacity: 0;
-
-      animation:
-        index-in .8s .8s var(--ease) forwards;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: var(--space-5);
     }
 
-    .index-line {
-      width: 1.75rem;
-      height: 1px;
-      background: var(--line);
-    }
-
-    .information {
-      width: min(100%, 1440px);
-
-      display: grid;
-
-      grid-template-columns:
-        minmax(145px, .55fr)
-        minmax(300px, 1.65fr)
-        minmax(220px, .7fr);
-
-      column-gap:
-        clamp(2.5rem, 6.4vw, 7.25rem);
-
-      margin-top:
-        clamp(4.35rem, 6.7vw, 7.25rem);
-
-      animation:
-        fade-up .95s .38s var(--ease) both;
-    }
-
-    .label {
-      margin-bottom: .72rem;
-
-      color: var(--secondary);
-
-      font-family: var(--mono);
-      font-size: .64rem;
-      font-weight: 450;
-
-      line-height: 1.45;
-      letter-spacing: .055em;
-      text-transform: uppercase;
-    }
-
-    .identity {
-      margin: 0;
-
-      color: var(--white);
-
-      font-size: 1rem;
-      font-weight: 520;
-
-      line-height: 1.35;
-      letter-spacing: -.025em;
-    }
-
-    .location {
-      margin-top: .28rem;
-
-      color: var(--secondary);
-
-      font-size: .76rem;
-      font-weight: 400;
-
-      line-height: 1.45;
-    }
-
-    .statement {
-      max-width: 40rem;
-
-      margin: 0;
-
-      color: var(--white);
-
-      font-size: var(--body);
-      font-weight: 400;
-
-      line-height: 1.42;
-      letter-spacing: -.025em;
-    }
-
-    .project {
-      justify-self: end;
-      width: min(100%, 260px);
-    }
-
-    .project-link {
+    .button {
       display: inline-flex;
       align-items: center;
-      gap: .65rem;
-
-      color: var(--white);
-
-      font-size: .8rem;
-      font-weight: 520;
-
-      line-height: 1.35;
-      letter-spacing: -.015em;
-
-      transition:
-        opacity .3s ease,
-        transform .3s ease;
-    }
-
-    .project-link:hover {
-      opacity: .6;
-      transform: translateX(3px);
-    }
-
-    .project-link::after {
-      content: "↗";
-
-      color: var(--secondary);
-
-      font-size: .85rem;
-    }
-
-    /* =========================
-       MASTER FOOTER
-       IDENTICO ALLA PAGINA
-       CESARE PARATORE
-       ========================= */
-
-    .footer {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr 1fr;
-
-      align-items: center;
-
-      min-height: 2.5rem;
-
-      padding-top: 1rem;
-
-      border-top:
-        1px solid var(--line-soft);
-
-      color: var(--secondary);
-
-      font-family: var(--mono);
-
-      font-size: .6rem;
-      font-weight: 450;
-
-      line-height: 1.45;
-
-      letter-spacing: .05em;
-
-      text-transform: uppercase;
-
-      animation:
-        fade-up .9s .45s var(--ease) both;
-    }
-
-    .footer-left {
-      min-width: 0;
-    }
-
-    .footer-center {
-      display: flex;
       justify-content: center;
-      align-items: center;
+      min-height: 3rem;
+      padding: 0.75rem 1.15rem;
+      border: 2px solid transparent;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      text-decoration: none;
+      transition:
+        transform 160ms ease,
+        background-color 160ms ease,
+        border-color 160ms ease;
     }
 
-    .footer-right {
+    .button:hover {
+      transform: translateY(-0.1rem);
+    }
+
+    .button-primary {
+      color: var(--color-white);
+      background: var(--color-accent);
+    }
+
+    .button-primary:hover {
+      background: var(--color-accent-dark);
+    }
+
+    .button-secondary {
+      color: var(--color-ink);
+      background: transparent;
+      border-color: var(--color-ink);
+    }
+
+    .button-secondary:hover {
+      color: var(--color-white);
+      background: var(--color-ink);
+    }
+
+    .hero-card {
+      padding: clamp(1.4rem, 4vw, 2.5rem);
+      color: var(--color-white);
+      background: var(--color-ink);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-card-label {
+      margin: 0 0 var(--space-5);
+      color: #f6c779;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: #d9e2ec;
+    }
+
+    .hero-card-list {
+      display: grid;
+      gap: var(--space-3);
+      margin: var(--space-5) 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-card-list li {
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
-
-      min-width: 0;
+      gap: 0.7rem;
+      align-items: flex-start;
     }
 
-    .privacy-link {
-      display: inline-block;
-
-      color: var(--secondary);
-
-      transition:
-        color .35s ease;
+    .hero-card-list li::before {
+      flex: 0 0 auto;
+      width: 0.55rem;
+      height: 0.55rem;
+      margin-top: 0.55rem;
+      background: #f6c779;
+      border-radius: 50%;
+      content: "";
     }
 
-    .privacy-link:hover {
-      color: var(--white);
+    .section {
+      padding: var(--space-8) 0;
     }
 
-    .signature-link {
-      display: inline-flex;
-      align-items: center;
-
-      min-height: 1.5rem;
-
-      color: var(--secondary);
-
-      white-space: nowrap;
-
-      transition:
-        color .35s ease;
+    .section-soft {
+      background: var(--color-surface-soft);
     }
 
-    .signature-name {
-      transition:
-        color .35s ease;
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: var(--space-6);
+      align-items: end;
+      margin-bottom: var(--space-6);
     }
 
-    .signature-line {
-      position: relative;
-
-      display: inline-block;
-
-      width: 0;
-
-      height: 1px;
-
-      margin-left: .2rem;
-
-      background: var(--white);
-
-      opacity: 0;
-
-      transform-origin: left center;
-
-      transition:
-        width .55s var(--ease),
-        opacity .25s ease,
-        margin-left .55s var(--ease);
+    .section-heading p {
+      max-width: 40rem;
+      margin: 0;
+      color: var(--color-muted);
     }
 
-    .signature-arrow {
-      display: inline-block;
-
-      margin-left: .08rem;
-
-      color: var(--white);
-
-      font-family: var(--sans);
-
-      font-size: .78rem;
-      font-weight: 400;
-
-      line-height: 1;
-
-      opacity: 0;
-
-      transform:
-        translate3d(-5px, 4px, 0);
-
-      transition:
-        opacity .25s ease,
-        transform .55s var(--ease);
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-4);
     }
 
-    .signature-link:hover {
-      color: var(--white);
+    .card {
+      height: 100%;
+      padding: var(--space-5);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
     }
 
-    .signature-link:hover
-      .signature-line,
-    .signature-link:focus-visible
-      .signature-line {
-      width: clamp(2rem, 4vw, 4.5rem);
-
-      margin-left: .45rem;
-
-      opacity: 1;
+    .card-icon {
+      display: grid;
+      width: 2.8rem;
+      height: 2.8rem;
+      margin-bottom: var(--space-4);
+      place-items: center;
+      color: var(--color-accent-dark);
+      background: #fff3dc;
+      border-radius: 50%;
+      font-weight: 800;
     }
 
-    .signature-link:hover
-      .signature-arrow,
-    .signature-link:focus-visible
-      .signature-arrow {
-      opacity: 1;
-
-      transform:
-        translate3d(0, 0, 0);
+    .card p {
+      margin: 0.8rem 0 0;
+      color: var(--color-muted);
     }
 
-    /* =========================
-       ANIMATIONS
-       ========================= */
-
-    @keyframes header-in {
-      from {
-        opacity: 0;
-        transform: translateY(-8px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: clamp(2rem, 7vw, 6rem);
+      align-items: start;
     }
 
-    @keyframes fade-up {
-      from {
-        opacity: 0;
-        transform: translateY(14px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .feature-copy > p {
+      max-width: 42rem;
+      color: var(--color-muted);
     }
 
-    @keyframes hero-reveal {
-      from {
-        transform:
-          translate3d(0, 104%, 0);
-      }
-
-      to {
-        transform:
-          translate3d(0, 0, 0);
-      }
+    .steps {
+      display: grid;
+      gap: var(--space-4);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: steps;
     }
 
-    @keyframes index-in {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
+    .steps li {
+      display: grid;
+      grid-template-columns: 2.5rem 1fr;
+      gap: var(--space-3);
+      align-items: start;
+      counter-increment: steps;
     }
 
-    @keyframes pulse {
-      0%,
-      100% {
-        opacity: .35;
-      }
-
-      50% {
-        opacity: 1;
-      }
+    .steps li::before {
+      display: grid;
+      width: 2.5rem;
+      height: 2.5rem;
+      place-items: center;
+      color: var(--color-white);
+      background: var(--color-ink);
+      border-radius: 50%;
+      content: counter(steps);
+      font-weight: 800;
     }
 
-    /* =========================
-       LARGE SCREENS
-       ========================= */
-
-    @media (min-width: 1600px) {
-      main {
-        padding-top: 8vh;
-        padding-bottom: 7vh;
-      }
+    .steps h3 {
+      margin-top: 0.25rem;
     }
 
-    /* =========================
-       TABLET
-       ========================= */
-
-    @media (max-width: 1100px) {
-      .information {
-        grid-template-columns:
-          minmax(130px, .6fr)
-          minmax(260px, 1.5fr);
-      }
-
-      .project {
-        grid-column: 2;
-
-        justify-self: start;
-
-        margin-top: 2.2rem;
-      }
+    .steps p {
+      margin: 0.45rem 0 0;
+      color: var(--color-muted);
     }
 
-    /* =========================
-       MOBILE
-       ========================= */
+    .cta {
+      padding: clamp(2rem, 5vw, 4rem);
+      color: var(--color-white);
+      background:
+        linear-gradient(115deg, rgb(16 42 67 / 0.98), rgb(36 59 83 / 0.94)),
+        url("/assets/images/partinico-community-bg.jpg") center / cover;
+      border-radius: var(--radius-lg);
+    }
 
-    @media (max-width: 760px) {
-      .page {
-        padding:
-          max(1.1rem, env(safe-area-inset-top))
-          max(1.1rem, env(safe-area-inset-right))
-          max(1.1rem, env(safe-area-inset-bottom))
-          max(1.1rem, env(safe-area-inset-left));
+    .cta h2 {
+      max-width: 14ch;
+      color: var(--color-white);
+    }
+
+    .cta p {
+      max-width: 42rem;
+      margin: var(--space-4) 0 0;
+      color: #d9e2ec;
+    }
+
+    .site-footer {
+      padding: var(--space-6) 0;
+      color: #d9e2ec;
+      background: var(--color-ink);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: var(--space-6);
+    }
+
+    .footer-brand {
+      color: var(--color-white);
+    }
+
+    .site-footer p {
+      max-width: 28rem;
+      margin: 1rem 0 0;
+      color: #9fb3c8;
+    }
+
+    .footer-title {
+      margin: 0 0 0.8rem;
+      color: var(--color-white);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: #bcccdc;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-white);
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: var(--space-6);
+      padding-top: var(--space-4);
+      border-top: 1px solid rgb(255 255 255 / 0.16);
+      color: #9fb3c8;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 52rem) {
+      .main-nav ul {
+        gap: 0.7rem;
       }
 
-      .header {
-        align-items: center;
-      }
-
-      .status {
-        font-size: .58rem;
-      }
-
-      main {
-        justify-content: flex-start;
-
-        padding:
-          clamp(5.5rem, 15vh, 8rem)
-          0
-          4rem;
-      }
-
-      .hero h1 {
-        font-size:
-          clamp(3.35rem, 15vw, 7rem);
-
-        line-height: .94;
-      }
-
-      .index {
+      .main-nav a:not(.nav-cta) {
         display: none;
       }
 
-      .information {
+      .hero-grid,
+      .feature-grid,
+      .section-heading {
         grid-template-columns: 1fr;
-
-        row-gap: 2.8rem;
-
-        margin-top: 4.2rem;
       }
 
-      .project {
+      .hero-card {
+        max-width: 40rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid > :first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 34rem) {
+      .container {
+        width: min(calc(100% - 1.25rem), var(--container));
+      }
+
+      .header-inner {
+        min-height: 4rem;
+      }
+
+      .brand-text {
+        max-width: 9rem;
+        font-size: 0.82rem;
+      }
+
+      .hero {
+        padding: 4rem 0;
+      }
+
+      h1 {
+        font-size: clamp(2.7rem, 16vw, 4rem);
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid > :first-child {
         grid-column: auto;
-
-        width: auto;
-
-        margin-top: 0;
-      }
-
-      .statement {
-        max-width: 34rem;
-      }
-
-      /* FOOTER — IDENTICO AL MASTER */
-
-      .footer {
-        grid-template-columns:
-          1fr
-          1fr;
-
-        min-height: 2.25rem;
-
-        font-size: .57rem;
-      }
-
-      .footer-left {
-        display: none;
-      }
-
-      .footer-center {
-        justify-content: flex-start;
-      }
-
-      .footer-right {
-        justify-content: flex-end;
-      }
-
-      .signature-line {
-        width: 0;
-      }
-
-      .signature-link:hover
-        .signature-line,
-      .signature-link:focus-visible
-        .signature-line {
-        width: 2.2rem;
       }
     }
-
-    /* =========================
-       SMALL MOBILE
-       ========================= */
-
-    @media (max-width: 420px) {
-      .brand {
-        font-size: .72rem;
-      }
-
-      .status {
-        gap: .4rem;
-        font-size: .52rem;
-      }
-
-      .status-dot {
-        width: 4px;
-        height: 4px;
-        flex-basis: 4px;
-      }
-
-      main {
-        padding-top: 5rem;
-      }
-
-      .hero h1 {
-        font-size:
-          clamp(3rem, 16vw, 4.5rem);
-
-        letter-spacing: -.07em;
-      }
-
-      .information {
-        margin-top: 3.5rem;
-      }
-
-      .footer {
-        font-size: .54rem;
-      }
-    }
-
-    /* =========================
-       LANDSCAPE
-       ========================= */
-
-    @media
-      (orientation: landscape)
-      and (max-height: 600px) {
-
-      main {
-        padding:
-          4rem
-          0
-          3rem;
-      }
-
-      .hero h1 {
-        font-size:
-          clamp(3rem, 10vw, 6.5rem);
-      }
-
-      .information {
-        margin-top: 3.5rem;
-      }
-    }
-
-    /* =========================
-       REDUCED MOTION
-       ========================= */
 
     @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
       *,
       *::before,
       *::after {
-        animation-duration: .01ms !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-        scroll-behavior: auto !important;
-      }
-
-      .hero-line > span {
-        transform: none;
-      }
-
-      .index {
-        opacity: 1;
-      }
-
-      .signature-line {
-        width: 0 !important;
-        opacity: 0 !important;
-      }
-
-      .signature-arrow {
-        opacity: 0 !important;
-        transform: none !important;
-      }
-    }
-
-    /* =========================
-       PRINT
-       ========================= */
-
-    @media print {
-      .page {
-        min-height: auto;
-      }
-
-      .hero-line > span {
-        transform: none;
-      }
-
-      .index {
-        display: none;
-      }
-
-      .footer {
-        color: #333;
-        border-color: #ccc;
       }
     }
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
 
-  <div class="page">
-
-    <header class="header">
-
-      <a
-        class="brand"
-        href="/"
-        aria-label="Partinico Digital Community — home"
-      >
-        PARTINICO
-        <span class="brand-sub">
-          / Digital Community
-        </span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Partinico Digital Community, home">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span class="brand-text">Partinico Digital Community</span>
       </a>
 
-      <div
-        class="status"
-        aria-label="Stato del progetto: online"
-      >
-        <span
-          class="status-dot"
-          aria-hidden="true"
-        ></span>
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <ul>
+          <li><a href="#progetto">Il progetto</a></li>
+          <li><a href="#cosa-trovi">Cosa trovi</a></li>
+          <li><a href="#come-funziona">Come funziona</a></li>
+          <li>
+            <a class="nav-cta" href="#contatti">Partecipa</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        Online
-      </div>
-
-    </header>
-
-
-    <main>
-
-      <div
-        class="meta"
-        aria-hidden="true"
-      >
-        <span class="meta-rule"></span>
-
-        Community / Sicilia 2026
-      </div>
-
-
-      <section
-        class="hero"
-        aria-labelledby="page-title"
-      >
-
-        <h1 id="page-title">
-
-          <span class="hero-line">
-            <span>
-              Partinico,
-            </span>
-          </span>
-
-          <span class="hero-line">
-            <span>
-              una comunità
-            </span>
-          </span>
-
-          <span class="hero-line">
-            <span>
-              digitale.
-            </span>
-          </span>
-
-        </h1>
-
-
-        <div
-          class="index"
-          aria-hidden="true"
-        >
-          <span>01</span>
-
-          <span
-            class="index-line"
-          ></span>
-
-          <span>01</span>
-        </div>
-
-      </section>
-
-
-      <section
-        class="information"
-        aria-label="Informazioni sul progetto"
-      >
-
+  <main id="contenuto">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
         <div>
+          <p class="eyebrow">Una comunità digitale locale</p>
 
-          <div class="label">
-            Luogo
+          <h1 id="hero-title">
+            Partinico, persone e territorio.
+          </h1>
+
+          <p class="lead">
+            Uno spazio digitale per scoprire, raccontare e connettere le realtà
+            che rendono vivo il territorio di Partinico.
+          </p>
+
+          <div class="button-group">
+            <a class="button button-primary" href="#cosa-trovi">
+              Scopri la community
+            </a>
+
+            <a class="button button-secondary" href="#contatti">
+              Proponi un’iniziativa
+            </a>
           </div>
-
-          <p class="identity">
-            Partinico
-          </p>
-
-          <p class="location">
-            Sicilia, Italia
-          </p>
-
         </div>
 
+        <aside class="hero-card" aria-label="Cosa offre il progetto">
+          <p class="hero-card-label">Il progetto</p>
 
+          <p>
+            Partinico Digital Community vuole rendere più facile trovare,
+            conoscere e valorizzare persone, attività, iniziative ed
+            opportunità del territorio.
+          </p>
+
+          <ul class="hero-card-list">
+            <li>Informazioni locali più semplici da trovare</li>
+            <li>Connessioni tra persone e realtà del territorio</li>
+            <li>Visibilità per iniziative e progetti autentici</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="progetto" class="section" aria-labelledby="progetto-title">
+      <div class="container feature-grid">
+        <div class="feature-copy">
+          <p class="eyebrow">Perché esiste</p>
+
+          <h2 id="progetto-title">
+            Un punto di incontro per la comunità.
+          </h2>
+
+          <p>
+            Le informazioni sul territorio sono spesso distribuite tra siti,
+            social e passaparola. Questo progetto nasce per raccoglierle e
+            renderle più accessibili, favorendo la partecipazione e la
+            conoscenza delle realtà locali.
+          </p>
+
+          <p>
+            L’obiettivo è costruire uno spazio utile, aggiornabile e aperto
+            alle persone, alle attività e alle organizzazioni che operano a
+            Partinico.
+          </p>
+        </div>
+
+        <ol class="steps" id="come-funziona">
+          <li>
+            <div>
+              <h3>Scopri</h3>
+              <p>
+                Trova informazioni, iniziative e realtà collegate al
+                territorio.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <h3>Partecipa</h3>
+              <p>
+                Condividi idee, segnala progetti e contribuisci alla crescita
+                della community.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <h3>Connettiti</h3>
+              <p>
+                Crea nuove connessioni tra persone, attività e opportunità
+                locali.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section
+      id="cosa-trovi"
+      class="section section-soft"
+      aria-labelledby="cosa-trovi-title"
+    >
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Cosa puoi trovare</p>
+            <h2 id="cosa-trovi-title">
+              Il territorio raccontato attraverso le sue realtà.
+            </h2>
+          </div>
+
+          <p>
+            Le sezioni verranno sviluppate progressivamente sulla base dei
+            contenuti disponibili e dei contributi della comunità.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">A</div>
+            <h3>Attività locali</h3>
+            <p>
+              Realtà, professionisti e attività che operano a Partinico e
+              contribuiscono alla vita del territorio.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">E</div>
+            <h3>Eventi e iniziative</h3>
+            <p>
+              Appuntamenti, progetti e occasioni di partecipazione aperte alla
+              comunità.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">O</div>
+            <h3>Opportunità</h3>
+            <p>
+              Idee, collaborazioni e possibilità che possono creare valore per
+              persone e organizzazioni locali.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="valore-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Un progetto aperto</p>
+            <h2 id="valore-title">
+              La community cresce con contributi reali.
+            </h2>
+          </div>
+
+          <p>
+            Una presenza nel progetto deve corrispondere a una realtà,
+            iniziativa o informazione verificabile. La qualità viene prima
+            della quantità.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">01</div>
+            <h3>Informazioni utili</h3>
+            <p>
+              Contenuti chiari, aggiornati e pensati per chi vive, visita o
+              vuole conoscere Partinico.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">02</div>
+            <h3>Visibilità autentica</h3>
+            <p>
+              Spazio per iniziative e realtà con un legame concreto con il
+              territorio.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">03</div>
+            <h3>Partecipazione</h3>
+            <p>
+              Un modo semplice per contribuire, proporre idee e migliorare le
+              informazioni disponibili.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatti" class="section" aria-labelledby="contatti-title">
+      <div class="container">
+        <div class="cta">
+          <p class="eyebrow">Partecipa al progetto</p>
+
+          <h2 id="contatti-title">
+            Hai un’attività, un’idea o un’iniziativa da raccontare?
+          </h2>
+
+          <p>
+            Contattaci per proporre un contenuto o condividere una realtà
+            collegata a Partinico.
+          </p>
+
+          <div class="button-group">
+            <!-- TODO: sostituire l'indirizzo email -->
+            <a
+              class="button button-primary"
+              href="mailto:TODO_EMAIL@example.com?subject=Proposta%20per%20Partinico%20Digital%20Community"
+            >
+              Scrivi alla community
+            </a>
+
+            <a class="button button-secondary" href="#progetto">
+              Scopri il progetto
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
         <div>
-
-          <div class="label">
-            Progetto
-          </div>
-
-          <p class="statement">
-            Un progetto digitale dedicato a
-            Partinico, al territorio e alle
-            possibilità che possono nascere
-            dalla sua comunità.
-          </p>
-
-        </div>
-
-
-        <div class="project">
-
-          <div class="label">
-            Comunità
-          </div>
-
-          <a
-            class="project-link"
-            href="https://cesareparatore.github.io/community/"
-            aria-label="Visita la sezione Comunità di Cesare Paratore"
-          >
-            Esplora Comunità
+          <a class="brand footer-brand" href="/" aria-label="Torna alla home">
+            <span class="brand-mark" aria-hidden="true">P</span>
+            <span class="brand-text">Partinico Digital Community</span>
           </a>
 
+          <p>
+            Un progetto digitale dedicato alle persone, alle attività e alle
+            iniziative del territorio di Partinico.
+          </p>
         </div>
 
-      </section>
+        <div>
+          <p class="footer-title">Navigazione</p>
 
-    </main>
+          <ul class="footer-links">
+            <li><a href="#progetto">Il progetto</a></li>
+            <li><a href="#cosa-trovi">Cosa trovi</a></li>
+            <li><a href="#contatti">Partecipa</a></li>
+          </ul>
+        </div>
 
+        <div>
+          <p class="footer-title">Collegamenti</p>
 
-    <!--
-      FOOTER MASTER — IDENTICO SU TUTTE LE PAGINE
-
-      Sinistra: vuota.
-      Centro: Privacy.
-      Destra: Cesare Paratore + linea dinamica + ↗.
-    -->
-
-    <footer class="footer">
-
-      <div
-        class="footer-left"
-        aria-hidden="true"
-      ></div>
-
-
-      <div class="footer-center">
-
-        <a
-          class="privacy-link"
-          href="https://cesareparatore.github.io/privacy/"
-          aria-label="Leggi l'informativa sulla privacy"
-        >
-          Privacy
-        </a>
-
+          <ul class="footer-links">
+            <!-- TODO: sostituire o rimuovere i collegamenti non disponibili -->
+            <li>
+              <a href="TODO_SOCIAL_URL_1" rel="me noopener">
+                Social ufficiale
+              </a>
+            </li>
+            <li>
+              <a href="TODO_SOCIAL_URL_2" rel="me noopener">
+                Secondo canale
+              </a>
+            </li>
+            <li>
+              <a href="/privacy.html">Privacy</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
+      <div class="footer-bottom">
+        <span>
+          © <span id="current-year">2026</span> Partinico Digital Community
+        </span>
 
-      <div class="footer-right">
-
-        <a
-          class="signature-link"
-          href="https://cesareparatore.github.io/"
-          aria-label="Vai alla pagina personale di Cesare Paratore"
-        >
-
-          <span class="signature-name">
-            Cesare Paratore
-          </span>
-
-          <span
-            class="signature-line"
-            aria-hidden="true"
-          ></span>
-
-          <span
-            class="signature-arrow"
-            aria-hidden="true"
-          >
-            ↗
-          </span>
-
-        </a>
-
+        <span>
+          Progetto digitale per il territorio di Partinico
+        </span>
       </div>
+    </div>
+  </footer>
 
-    </footer>
+  <script>
+    (() => {
+      const yearElement = document.getElementById("current-year");
 
-  </div>
-
+      if (yearElement) {
+        yearElement.textContent = String(new Date().getFullYear());
+      }
+    })();
+  </script>
 </body>
 </html>
